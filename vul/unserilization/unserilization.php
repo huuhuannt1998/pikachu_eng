@@ -25,57 +25,57 @@ include_once $PIKA_ROOT_DIR.'header.php';
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="unserilization.php">PHP反序列化</a>
+                    <a href="unserilization.php">PHPDeserialization</a>
                 </li>
-                <li class="active">概述</li>
+                <li class="active">Overview</li>
             </ul>
         </div>
         <div class="page-content">
 
 
-            <p>在理解这个漏洞前,你需要先搞清楚php中serialize()，unserialize()这两个函数。</p>
-            <b>序列化serialize()</b><br />
-            序列化说通俗点就是把一个对象变成可以传输的字符串,比如下面是一个对象:
+            <p>InSolutionThisVulnerabilityBefore,YouToFirstEngageClearphpInserialize()，unserialize()Function。</p>
+            <b>serialize()</b><br />
+            SayPointJustIsPutOneToChangeCanTransferOfCharacterString,ComparedSuch asNextSurfaceIsOneTo:
             <pre>
     class S{
         public $test="pikachu";
     }
-    $s=new S(); //创建一个对象
-    serialize($s); //把这个对象进行序列化
-    序列化后得到的结果是这个样子的:O:1:"S":1:{s:4:"test";s:7:"pikachu";}
-        O:代表object
-        1:代表对象名字长度为一个字符
-        S:对象的名称
-        1:代表对象里面有一个变量
-        s:数据类型
-        4:变量名称的长度
-        test:变量名称
-        s:数据类型
-        7:变量值的长度
-        pikachu:变量值
+    $s=new S(); //CreateOneTo
+    serialize($s); //PutThisToGoLine
+    ToOfEndResultIsThisOf:O:1:"S":1:{s:4:"test";s:7:"pikachu";}
+        O:Tableobject
+        1:TableToNameLengthForOneCharacter
+        S:ToOfNameName
+        1:TableToInsideHaveOneChangeVolume
+        s:DataClassType
+        4:ChangeVolumeNameNameOfLength
+        test:ChangeVolumeNameName
+        s:DataClassType
+        7:ChangeVolumeValueOfLength
+        pikachu:ChangeVolumeValue
     </pre>
 
-            <b>反序列化unserialize()</b><br />
-            <p>就是把被序列化的字符串还原为对象,然后在接下来的代码中继续使用。</p>
+            <b>Deserializationunserialize()</b><br />
+            <p>JustIsPutByOfCharacterStringAlsoForTo,HoweverInNextOfCodeInUse。</p>
             <pre>
     $u=unserialize("O:1:"S":1:{s:4:"test";s:7:"pikachu";}");
-    echo $u->test; //得到的结果为pikachu
+    echo $u->test; //ToOfEndResultForpikachu
     </pre>
 
-            <p>序列化和反序列化本身没有问题,但是如果反序列化的内容是用户可以控制的,且后台不正当的使用了PHP中的魔法函数,就会导致安全问题</p>
+            <p>AndDeserializationNoProblem,ButIsSuch asResultDeserializationOfIsUseUserCanOf,BackgroundNotWhenOfUseHasPHPIn theFunction,JustWillLead toSafetyProblem</p>
             <pre>
-        常见的几个魔法函数:
-        __construct()当一个对象创建时被调用
+        OfFunction:
+        __construct()WhenOneToCreateWhenByUse
 
-        __destruct()当一个对象销毁时被调用
+        __destruct()WhenOneToWhenByUse
 
-        __toString()当一个对象被当作一个字符串使用
+        __toString()WhenOneToByWhenOneCharacterStringUse
 
-        __sleep() 在对象在被序列化之前运行
+        __sleep() InToInByOnBeforeLine
 
-        __wakeup将在序列化之后立即被调用
+        __wakeupWillInOnByUse
 
-        漏洞举例:
+        Vulnerability:
 
         class S{
             var $test = "pikachu";

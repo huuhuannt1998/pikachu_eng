@@ -33,16 +33,16 @@ if(isset($_GET['submit'])){
             $data=mysqli_fetch_assoc($result);
             setcookie('abc[uname]',$_GET['username'],time()+36000);
             setcookie('abc[pw]',md5($_GET['password']),time()+36000);
-            //登录时，生成cookie,10个小时有效期，供其他页面判断
+            //When，Generatecookie,10SmallWhenHaveEffect，OtherPageJudge
             header("location:abc.php");
         }else{
             $query_username = "select * from member where username='$username'";
             $res_user = execute($link,$query_username);
             if(mysqli_num_rows($res_user) == 1){
-                $html.="<p class='notice'>您输入的密码错误</p>";
+                $html.="<p class='notice'>YouInputOfPasswordError</p>";
 
             }else{
-                $html.="<p class='notice'>您输入的账号错误</p>";
+                $html.="<p class='notice'>YouInputOfAccountError</p>";
             }
 
         }
@@ -59,14 +59,14 @@ if(isset($_GET['submit'])){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="infoleak.php">敏感信息泄露</a>
+                    <a href="infoleak.php">Sensitive information leakage</a>
                 </li>
                 <li class="active">find abc</li>
             </ul>
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="找找看,很多地方都漏点了...">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="Take a look,AllPointHas...">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">
@@ -106,7 +106,7 @@ if(isset($_GET['submit'])){
                     <?php echo $html;?>
 
 
-                </div><!-- 测试账号:lili/123456-->
+                </div><!-- Account:lili/123456-->
 
             </div><!-- /.widget-body -->
 

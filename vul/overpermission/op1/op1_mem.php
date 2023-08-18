@@ -17,13 +17,13 @@ include_once $PIKA_ROOT_DIR.'inc/function.php';
 include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
 
 $link=connect();
-// 判断是否登录，没有登录不能访问
+// JudgeIsIs logged in?，NoNotCanVisit
 if(!check_op_login($link)){
     header("location:op1_login.php");
 }
 $html='';
 if(isset($_GET['submit']) && $_GET['username']!=null){
-    //没有使用session来校验,而是使用的传进来的值，权限校验出现问题,这里应该跟登录态关系进行绑定
+    //NoUsesessionCome,IsUseOfTransferGoComeOfValue，PermissionProblem,HereShouldGoLine
     $username=escape($link, $_GET['username']);
     $query="select * from member where username='$username'";
     $result=execute($link, $query);
@@ -37,12 +37,12 @@ if(isset($_GET['submit']) && $_GET['username']!=null){
 
         $html.=<<<A
 <div id="per_info">
-   <h1 class="per_title">hello,{$uname},你的具体信息如下：</h1>
-   <p class="per_name">姓名:{$uname}</p>
-   <p class="per_sex">性别:{$sex}</p>
-   <p class="per_phone">手机:{$phonenum}</p>    
-   <p class="per_add">住址:{$add}</p> 
-   <p class="per_email">邮箱:{$email}</p> 
+   <h1 class="per_title">hello,{$uname},YouOfInformationSuch asNext：</h1>
+   <p class="per_name">Name:{$uname}</p>
+   <p class="per_sex">:{$sex}</p>
+   <p class="per_phone">Mobile phone:{$phonenum}</p>    
+   <p class="per_add">:{$add}</p> 
+   <p class="per_email">:{$email}</p> 
 </div>
 A;
     }
@@ -75,18 +75,18 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
                 </li>
                 <li class="active">op1 member</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="这里可以查别人的信息吗?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="HereCanCheckPersonOfInformationRight??">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
             <div id="mem_main">
-                <p class="mem_title">欢迎来到个人信息中心  | <a style="color:bule;" href="op1_mem.php?logout=1">退出登录</a></p>
+                <p class="mem_title">WelcomeComeToPersonInformationIn  | <a style="color:bule;" href="op1_mem.php?logout=1"></a></p>
                 <form class="msg1" method="get">
                     <input type="hidden" name="username" value="<?php echo $_SESSION['op']['username']; ?>" />
-                    <input type="submit" name="submit" value="点击查看个人信息" />
+                    <input type="submit" name="submit" value="ClickCheckLookPersonInformation" />
                 </form>
                 <?php echo $html;?>
 

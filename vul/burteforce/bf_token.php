@@ -45,7 +45,7 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST
             }
 
         }else{
-            $html.= '<p>执行错误:'.$line_pre->errno.'错误信息:'.$line_pre->error.'</p>';
+            $html.= '<p>HoldLineError:'.$line_pre->errno.'ErrorInformation:'.$line_pre->error.'</p>';
         }
 
 
@@ -59,7 +59,7 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password'] && $_POST
 }
 
 
-//生成token
+//Generatetoken
 set_token();
 
 
@@ -73,14 +73,14 @@ set_token();
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">Brute force cracking</a>
                 </li>
-                <li class="active">token防爆破?</li>
+                <li class="active">tokenAnti-brute force?</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="token了解下,后面搞CSRF会用到....虽然这里并没有什么鸟用.">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="tokenHasSolutionNext,BehindEngageCSRFWillUseTo....AlthoughHereAndNoWhatBirdUse.">
+                PointOnceTip~
             </a>
 
         </div>

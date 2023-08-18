@@ -3,7 +3,7 @@ include_once "inc/mysql.inc.php";
 include_once "inc/config.inc.php";
 
 $link=connect();
-// 判断是否登录，没有登录不能访问
+// JudgeIsIs logged in?，NoNotCanVisit
 if(!check_login($link)){
     header("location:index.php");
 }
@@ -23,18 +23,18 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>pikachu Xss 后台</title>
+    <title>pikachu Xss Background</title>
     <link rel="stylesheet" type="text/css" href="pkxss.css"/>
 </head>
 <body>
 <div id="title">
-    <h1>pikachu Xss 后台</h1>
+    <h1>pikachu Xss Background</h1>
     <div id="xsstest_main">
-        <h2 class="left_title">测试模块 |<a href="xssmanager.php?logout=1">退出登陆</a></h2>
+        <h2 class="left_title"> |<a href="xssmanager.php?logout=1"></a></h2>
         <ul class="left_list">
-            <li><a href="xcookie/pkxss_cookie_result.php">cookie搜集</a></li>
-            <li><a href="xfish/pkxss_fish_result.php">钓鱼结果</a></li>
-            <li><a href="rkeypress/pkxss_keypress_result.php">键盘记录</a></li>
+            <li><a href="xcookie/pkxss_cookie_result.php">cookieSearchSet</a></li>
+            <li><a href="xfish/pkxss_fish_result.php">EndResult</a></li>
+            <li><a href="rkeypress/pkxss_keypress_result.php"></a></li>
         </ul>
     </div>
 </body>

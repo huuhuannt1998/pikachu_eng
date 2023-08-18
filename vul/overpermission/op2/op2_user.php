@@ -17,7 +17,7 @@ include_once $PIKA_ROOT_DIR.'inc/function.php';
 include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
 
 $link=connect();
-// 判断是否登录，没有登录不能访问
+// JudgeIsIs logged in?，NoNotCanVisit
 if(!check_op2_login($link)){
     header("location:op2_login.php");
 }
@@ -45,23 +45,23 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
                 </li>
                 <li class="active">op2 user</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="想知道当超级boss是什么滋味吗">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="WhenbossIsRight?">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
 
             <div id="admin_main">
-                <p class="admin_title">欢迎来到后台管理中心,您只有查看权限! | <a style="color:bule;" href="op2_user.php?logout=1">退出登录</a></p>
+                <p class="admin_title">WelcomeComeToBackgroundIn,YouOnlyHaveCheckLookPermission! | <a style="color:bule;" href="op2_user.php?logout=1"></a></p>
                 <table class="table table-bordered table-striped">
                     <tr>
-                        <td>用名</td>
-                        <td>性别</td>
-                        <td>手机</td>
-                        <td>邮箱</td>
-                        <td>地址</td>
+                        <td>UseName</td>
+                        <td></td>
+                        <td>Mobile phone</td>
+                        <td></td>
+                        <td>Address</td>
                     </tr>
                     <?php
                     $query="select * from member";

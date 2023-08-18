@@ -18,23 +18,23 @@ include_once $PIKA_ROOT_DIR . 'header.php';
 
 $html1='';
 if(!ini_get('allow_url_include')){
-    $html1.="<p style='color: red'>warning:你的allow_url_include没有打开,请在php.ini中打开了再测试该漏洞,记得修改后,重启中间件服务!</p>";
+    $html1.="<p style='color: red'>warning:YouOfallow_url_includeNo,PleaseInphp.iniInHasVulnerability,Modify,AgainMiddleware!</p>";
 }
 $html2='';
 if(!ini_get('allow_url_fopen')){
-    $html2.="<p style='color: red;'>warning:你的allow_url_fopen没有打开,请在php.ini中打开了再测试该漏洞,重启中间件服务!</p>";
+    $html2.="<p style='color: red;'>warning:YouOfallow_url_fopenNo,PleaseInphp.iniInHasVulnerability,AgainMiddleware!</p>";
 }
 $html3='';
 if(phpversion()<='5.3.0' && !ini_get('magic_quotes_gpc')){
-    $html3.="<p style='color: red;'>warning:你的magic_quotes_gpc打开了,请在php.ini中关闭了再测试该漏洞,重启中间件服务!</p>";
+    $html3.="<p style='color: red;'>warning:YouOfmagic_quotes_gpcHas,PleaseInphp.iniInCloseHasVulnerability,AgainMiddleware!</p>";
 }
 
 
-//远程文件包含漏洞,需要php.ini的配置文件符合相关的配置
+//FileVulnerability,Tophp.iniOfConfigurationFileRelatedOfConfiguration
 $html='';
 if(isset($_GET['submit']) && $_GET['filename']!=null){
     $filename=$_GET['filename'];
-    include "$filename";//变量传进来直接包含,没做任何的安全限制
+    include "$filename";//ChangeVolumeTransferGoCome,NoDoOfSafetyLimit
 
 
 }
@@ -52,12 +52,12 @@ if(isset($_GET['submit']) && $_GET['filename']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="fileinclude.php">file include</a>
                 </li>
-                <li class="active">远程文件包含</li>
+                <li class="active">File</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先了解一下include()函数的用法吧">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstHasSolutionOnceinclude()FunctionOfUseBar">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">

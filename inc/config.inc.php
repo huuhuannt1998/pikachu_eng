@@ -1,15 +1,15 @@
 <?php
-//全局session_start
+//Globalsession_start
 session_start();
-//全局居设置时区
+//GlobalResidential setting time zone
 date_default_timezone_set('Asia/Shanghai');
-//全局设置默认字符
+//GlobalSettingDefaultCharacter
 header('Content-type:text/html;charset=utf-8');
-//定义数据库连接参数
-define('DBHOST', '127.0.0.1');//将localhost或者127.0.0.1修改为数据库服务器的地址
-define('DBUSER', 'root');//将root修改为连接mysql的用户名
-define('DBPW', '');//将root修改为连接mysql的密码，如果改了还是连接不上，请先手动连接下你的数据库，确保数据库服务没问题在说!
-define('DBNAME', 'pikachu');//自定义，建议不修改
-define('DBPORT', '3306');//将3306修改为mysql的连接端口，默认tcp3306
+//DefinitionDatabaseConnectionParameter
+define('DBHOST', '127.0.0.1');//WilllocalhostOr127.0.0.1Modified to database serverOfAddress
+define('DBUSER', 'root');//WillrootModified to connectmysqlOfUsername
+define('DBPW', '');//WillrootModified to connectmysqlOfPassword，Such asIf changed, it is still connectedNotOn，Please connect manually firstYouOfDatabase，EnsureDatabaseThe service is okayInSay!
+define('DBNAME', 'pikachu');//Customize，RecommendNotModify
+define('DBPORT', '3306');//Will3306ModifyFormysqlOfConnection port，Defaulttcp3306
 
 ?>

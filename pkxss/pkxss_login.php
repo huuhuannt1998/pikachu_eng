@@ -9,7 +9,7 @@ $link=connect();
 $html='';
 if(isset($_POST['submit'])){
     if($_POST['username']!=null && $_POST['password']!=null){
-        //转义，防注入
+        //Escape，Injection
         $username=escape($link, $_POST['username']);
         $password=escape($link, $_POST['password']);
         $query="select * from users where username='$username' and password=md5('$password')";
@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
             $_SESSION['pkxss']['password']=sha1(md5($password));
             header("location:xssmanager.php");
         }else{
-            $html.="<p>登录失败,请重新登录</p>";
+            $html.="<p>Failure,PleaseAgainNew</p>";
         }
 
     }
@@ -37,17 +37,17 @@ if(isset($_POST['submit'])){
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>pikachu Xss 后台</title>
+    <title>pikachu Xss Background</title>
     <link rel="stylesheet" type="text/css" href="pkxss.css"/>
 </head>
 <body>
 <div id="title">
-    <h1>pikachu Xss 后台</h1>
+    <h1>pikachu Xss Background</h1>
     <?php echo $html;?>
     <div>
         <form method="post">
-            用户:<input name="username" type="text" />
-            密码<input name="password" type="password" />
+            UseUser:<input name="username" type="text" />
+            Password<input name="password" type="password" />
             <input type="submit" name="submit" value="login" />
         </form>
     </div>

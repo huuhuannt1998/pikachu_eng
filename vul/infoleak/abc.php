@@ -30,7 +30,7 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="infoleak.php">敏感信息泄露</a>
+                    <a href="infoleak.php">Sensitive information leakage</a>
                 </li>
                 <li class="active">abc</li>
             </ul>
@@ -38,18 +38,18 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
 
         </div>
         <div class="page-content">
-            <a href="abc.php?logout=1">退出登陆</a>
+            <a href="abc.php?logout=1"></a>
             <br />
             <br />
 
-            <p>那一天我二十一岁，在我一生的黄金时代</p>
+            <p>ThatOneOne，InOneOfWhen</p>
 
-            <p>我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云</p>
+            <p>Have。，，AlsoInOneChangeOnOf</p>
 
-            <p>后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样</p>
+            <p>Come，JustIsSlowOf，PersonOneNext，AlsoOne，ChangeHasOfOne</p>
 
-            <p>可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我</p>
-                                                            -----王小波《黄金时代》
+            <p>IsOneWhenNoToOnePoint。WillNext，AlsoNotHas</p>
+                                                            -----Small《When》
 
         </div><!-- /.page-content -->
     </div>

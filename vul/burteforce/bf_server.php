@@ -24,18 +24,18 @@ $link=connect();
 $html="";
 if(isset($_POST['submit'])) {
     if (empty($_POST['username'])) {
-        $html .= "<p class='notice'>用户名不能为空</p>";
+        $html .= "<p class='notice'>UsernameNotCanForEmpty</p>";
     } else {
         if (empty($_POST['password'])) {
-            $html .= "<p class='notice'>密码不能为空</p>";
+            $html .= "<p class='notice'>PasswordNotCanForEmpty</p>";
         } else {
             if (empty($_POST['vcode'])) {
-                $html .= "<p class='notice'>验证码不能为空哦！</p>";
+                $html .= "<p class='notice'>VerificationCodeNotCanForEmptyOh！</p>";
             } else {
-//              验证验证码是否正确
+//              VerificationVerificationCodeIsNo
                 if (strtolower($_POST['vcode']) != strtolower($_SESSION['vcode'])) {
-                    $html .= "<p class='notice'>验证码输入错误哦！</p>";
-                    //应该在验证完成后,销毁该$_SESSION['vcode']
+                    $html .= "<p class='notice'>VerificationCodeInputErrorOh！</p>";
+                    //ShouldInVerificationAfter completion,Destroy it$_SESSION['vcode']
                 }else{
 
                     $username = $_POST['username'];
@@ -49,14 +49,14 @@ if(isset($_POST['submit'])) {
 
                     if($line_pre->execute()){
                         $line_pre->store_result();
-                        //虽然前面做了为空判断,但最后,却没有验证验证码!!!
+                        //AlthoughBeforeSurfaceHasForEmptyJudge,But in the end,ButNoVerificationVerificationCode!!!
                         if($line_pre->num_rows()==1){
                             $html.='<p> login success</p>';
                         }else{
                             $html.= '<p> username or password is not exists～</p>';
                         }
                     }else{
-                        $html.= '<p>执行错误:'.$line_pre->errno.'错误信息:'.$line_pre->error.'</p>';
+                        $html.= '<p>HoldLineError:'.$line_pre->errno.'ErrorInformation:'.$line_pre->error.'</p>';
                     }
                 }
             }
@@ -75,14 +75,14 @@ if(isset($_POST['submit'])) {
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">Brute force cracking</a>
                 </li>
-                <li class="active">验证码绕过(on server)</li>
+                <li class="active">Captcha bypass(on server)</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="这个验证码好像一直有效哎!用户还是那三个默认用户.">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="ThisVerificationCodeOneHaveEffectSigh!UseUserStillThatThreeDefaultUseUser.">
+                PointOnceTip~
             </a>
 
         </div>
@@ -115,7 +115,7 @@ if(isset($_POST['submit'])) {
                 </br>
                 <label>
                         <span>
-                            <input type="text" name="vcode" placeholder="验证码" />
+                            <input type="text" name="vcode" placeholder="VerificationCode" />
                             <i class="ace-icon fa fa-lock"></i>
                         </span>
                 </label>

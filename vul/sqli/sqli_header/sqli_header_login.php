@@ -26,7 +26,7 @@ $link=connect();
 $html='';
 if(isset($_POST['submit'])){
     if($_POST['username']!=null && $_POST['password']!=null){
-        //转义，防注入
+        //Escape，Injection
         $username=escape($link, $_POST['username']);
         $password=escape($link, $_POST['password']);
         $query="select * from users where username='$username' and password=md5('$password')";
@@ -35,10 +35,10 @@ if(isset($_POST['submit'])){
             $data=mysqli_fetch_assoc($result);
             setcookie('ant[uname]',$_POST['username'],time()+36000);
             setcookie('ant[pw]',sha1(md5($_POST['password'])),time()+36000);
-            //登录时，生成cookie,10个小时有效期，供其他页面判断
+            //When，Generatecookie,10SmallWhenHaveEffect，OtherPageJudge
             header("location:sqli_header.php");
         }else{
-            $html.=("<p>登录失败,请重新登录</p>");
+            $html.=("<p>Failure,PleaseAgainNew</p>");
         }
     }
 }
@@ -57,11 +57,11 @@ if(isset($_POST['submit'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">http头注入</li>
+                <li class="active">httpHeaderInjection</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="admin/123456">
-                点一下提示~
+                PointOnceTip~
             </a>
 
 

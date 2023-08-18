@@ -23,15 +23,15 @@ $html1='';
 $html2='';
 if(isset($_GET['submit']) && $_GET['name']!=null){
 
-    //这里没有做任何处理，直接拼到select里面去了
+    //HereNoDo，ToselectInsideHas
     $name=$_GET['name'];
 
-    //这里的变量是模糊匹配，需要考虑闭合
+    //HereOfChangeVolumeIs，To
     $query="select username,id,email from member where username like '%$name%'";
     $result=execute($link, $query);
     if(mysqli_num_rows($result)>=1){
-        //彩蛋:这里还有个xss
-        $html2.="<p class='notice'>用户名中含有{$_GET['name']}的结果如下：<br />";
+        //:HereAlsoHavexss
+        $html2.="<p class='notice'>UsernameInHave{$_GET['name']}OfEndResultSuch asNext：<br />";
         while($data=mysqli_fetch_assoc($result)){
             $uname=$data['username'];
             $id=$data['id'];
@@ -40,7 +40,7 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
         }
     }else{
 
-        $html1.="<p class='notice'>0o。..没有搜索到你输入的信息！</p>";
+        $html1.="<p class='notice'>0o。..NoSearchToYouInputOfInformation！</p>";
     }
 }
 
@@ -57,12 +57,12 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="sqli.php">sqli</a>
                 </li>
-                <li class="active">搜索型注入</li>
+                <li class="active">SearchTypeInjection</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="%%">
-                点一下提示~
+                PointOnceTip~
             </a>
 
         </div>
@@ -70,10 +70,10 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
 
 
             <div id="sqli_main">
-                <p class="sqli_title">请输入用户名进行查找<br />如果记不住用户名，输入用户名的一部分搜索的试试看？</p>
+                <p class="sqli_title">PleaseInputUsernameGoLineCheckFind<br />Such asResultNotUsername，InputUsernameOfOneSearchOfLook？</p>
                 <form method="get">
                     <input class="sqli_in" type="text" name="name" />
-                    <input class="sqli_submit" type="submit" name="submit" value="搜索" />
+                    <input class="sqli_submit" type="submit" name="submit" value="Search" />
                 </form>
                 <?php echo $html2;echo $html1;?>
             </div>

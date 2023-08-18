@@ -15,7 +15,7 @@ $PIKA_ROOT_DIR =  "../../";
 include_once $PIKA_ROOT_DIR.'header.php';
 
 
-//payload,url编码一下:
+//payload,urlCodeOnce:
 $xxepayload1 = <<<EOF
 <?xml version = "1.0"?>
 <!DOCTYPE ANY [
@@ -36,11 +36,11 @@ EOF;
 //print_r($xxedata);
 
 
-//查看当前LIBXML的版本
+//CheckLookWhenBeforeLIBXMLOf
 //print_r(LIBXML_VERSION);
 
 $html='';
-//考虑到目前很多版本里面libxml的版本都>=2.9.0了,所以这里添加了LIBXML_NOENT参数开启了外部实体解析
+//ToBeforeInsidelibxmlOfAll>=2.9.0Has,SoAsHereHasLIBXML_NOENTParameterHasOutsideSolution
 if(isset($_POST['submit']) and $_POST['xml'] != null){
 
 
@@ -50,7 +50,7 @@ if(isset($_POST['submit']) and $_POST['xml'] != null){
     if($data){
         $html.="<pre>{$data}</pre>";
     }else{
-        $html.="<p>XML声明、DTD文档类型定义、文档元素这些都搞懂了吗?</p>";
+        $html.="<p>XML、DTDTextClassTypeDefinition、TextAllEngageUnderstandHasRight??</p>";
     }
 }
 
@@ -65,19 +65,19 @@ if(isset($_POST['submit']) and $_POST['xml'] != null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xee.php"></a>
                 </li>
-                <li class="active">xxe漏洞</li>
+                <li class="active">xxeVulnerability</li>
             </ul>
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先把XML声明、DTD文档类型定义、文档元素这些基础知识自己看一下">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstPutXML、DTDTextClassTypeDefinition、TextLookOnce">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">
 
             <form method="post">
-                <p>这是一个接收xml数据的api:</p>
+                <p>IsOneReceivexmlDataOfapi:</p>
                     <input type="text" name="xml" />
-                    <input type="submit" name="submit" value="提交">
+                    <input type="submit" name="submit" value="Submit">
             </form>
             <?php echo $html;?>
 

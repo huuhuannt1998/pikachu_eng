@@ -20,8 +20,8 @@ $PIKA_ROOT_DIR =  "../../";
 include_once $PIKA_ROOT_DIR.'header.php';
 
 
-//读取PHP文件的源码:php://filter/read=convert.base64-encode/resource=ssrf.php
-//内网请求:http://x.x.x.x/xx.index
+//ReadPHPFileOfSourceCode:php://filter/read=convert.base64-encode/resource=ssrf.php
+//IntranetPleasePlease:http://x.x.x.x/xx.index
 if(isset($_GET['file']) && $_GET['file'] !=null){
     $filename = $_GET['file'];
     $str = file_get_contents($filename);
@@ -41,16 +41,16 @@ if(isset($_GET['file']) && $_GET['file'] !=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="ssrf.php"></a>
                 </li>
-                <li class="active">概述</li>
+                <li class="active">Overview</li>
             </ul>
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先了解一下file_get_contents()相关函数的用法吧">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstHasSolutionOncefile_get_contents()RelatedFunctionOfUseBar">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">
 
-            <a href="ssrf_fgc.php?file=<?php echo 'http://127.0.0.1/'.$RD.'vul/ssrf/ssrf_info/info2.php';?>">反正都读了,那就在来一首吧</a>
+            <a href="ssrf_fgc.php?file=<?php echo 'http://127.0.0.1/'.$RD.'vul/ssrf/ssrf_info/info2.php';?>">AnywayAllReadHas,ThatJustInComeOne song</a>
 
         </div><!-- /.page-content -->
     </div>

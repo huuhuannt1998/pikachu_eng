@@ -19,7 +19,7 @@ include_once $PIKA_ROOT_DIR."inc/mysql.inc.php";
 
 $html='';
 if(isset($_GET['text'])){
-    $html.= "<a href='#' onclick='domxss()'>有些费尽心机想要忘记的事情,后来真的就忘掉了</a>";
+    $html.= "<a href='#' onclick='domxss()'>HaveToOf,ComeOfJustHas</a>";
 }
 
 ?>
@@ -32,12 +32,12 @@ if(isset($_GET['text'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">DOM型xss</li>
+                <li class="active">DOMTypexss</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="dom型XSS是鸡肋吗?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="domTypeXSSIsRight??">
+                PointOnceTip~
             </a>
 
         </div>
@@ -51,15 +51,15 @@ if(isset($_GET['text'])){
                         var xss = txss.replace(/\+/g,' ');
 //                        alert(xss);
 
-                        document.getElementById("dom").innerHTML = "<a href='"+xss+"'>就让往事都随风,都随风吧</a>";
+                        document.getElementById("dom").innerHTML = "<a href='"+xss+"'>JustToAll,AllBar</a>";
                     }
-                    //试试：'><img src="#" onmouseover="alert('xss')">
-                    //试试：' onclick="alert('xss')">,闭合掉就行
+                    //：'><img src="#" onmouseover="alert('xss')">
+                    //：' onclick="alert('xss')">,JustLine
                 </script>
                 <!--<a href="" onclick=('xss')>-->
                 <form method="get">
                 <input id="text" name="text" type="text"  value="" />
-                <input id="submit" type="submit" value="请说出你的伤心往事"/>
+                <input id="submit" type="submit" value="PleaseSayYouOfTo"/>
                 </form>
                 <div id="dom"></div>
             </div>

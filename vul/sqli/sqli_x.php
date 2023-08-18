@@ -22,9 +22,9 @@ $link=connect();
 $html='';
 
 if(isset($_GET['submit']) && $_GET['name']!=null){
-    //这里没有做任何处理，直接拼到select里面去了
+    //HereNoDo，ToselectInsideHas
     $name=$_GET['name'];
-    //这里的变量是字符型，需要考虑闭合
+    //HereOfChangeVolumeIsCharacterType，To
     $query="select id,email from member where username=('$name')";
     $result=execute($link, $query);
     if(mysqli_num_rows($result)>=1){
@@ -35,7 +35,7 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
         }
     }else{
 
-        $html.="<p class='notice'>您输入的username不存在，请重新输入！</p>";
+        $html.="<p class='notice'>YouInputOfusernameNotStoreIn，PleaseAgainNewInput！</p>";
     }
 }
 
@@ -54,9 +54,9 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
                 </li>
                 <li class="active">x</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="管tmd的什么型,能够制造出闭合,就是本事">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="tmdOfType,Can,JustIs">
+                PointOnceTip~
             </a>
 
 
@@ -67,7 +67,7 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
                 <p class="sqli_title">what's your username?</p>
                 <form method="get">
                     <input class="sqli_in" type="text" name="name" />
-                    <input class="sqli_submit" type="submit" name="submit" value="查询" />
+                    <input class="sqli_submit" type="submit" name="submit" value="Check" />
                 </form>
                 <?php echo $html;?>
             </div>

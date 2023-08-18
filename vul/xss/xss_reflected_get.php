@@ -19,10 +19,10 @@ include_once $PIKA_ROOT_DIR.'header.php';
 $html='';
 if(isset($_GET['submit'])){
     if(empty($_GET['message'])){
-        $html.="<p class='notice'>输入'kobe'试试-_-</p>";
+        $html.="<p class='notice'>Input'kobe'-_-</p>";
     }else{
         if($_GET['message']=='kobe'){
-            $html.="<p class='notice'>愿你和{$_GET['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
+            $html.="<p class='notice'>YouAnd{$_GET['message']}One，，！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
         }else{
             $html.="<p class='notice'>who is {$_GET['message']},i don't care!</p>";
         }
@@ -41,12 +41,12 @@ if(isset($_GET['submit'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">反射型xss(get)</li>
+                <li class="active">Reflectedxss(get)</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="管tmd什么xss,首先你应该输入kobe看一下再说">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="tmdxss,FirstYouShouldInputkobeLookOnceSay">
+                PointOnceTip~
             </a>
 
         </div>

@@ -79,7 +79,7 @@ if (!isset($ACTIVE)){
             <a href="<?php echo $PIKA_ROOT_DIR;?>index.php" class="navbar-brand">
                 <small>
                     <i class="fa fa-key"></i>
-                    Pikachu 漏洞练习平台 pika~pika~
+                    Pikachu Vulnerability Practice Platform pika~pika~
                 </small>
             </a>
         </div>
@@ -91,8 +91,8 @@ if (!isset($ACTIVE)){
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="<?php echo $PIKA_ROOT_DIR;?>assets/images/avatars/pikachu1.png" alt="Jason's Photo" />
                         <span class="user-info">
-									<small>欢迎</small>
-									骚年
+									<small>Welcome</small>
+									Youngster
                         </span>
                     </a>
 
@@ -117,7 +117,7 @@ if (!isset($ACTIVE)){
             <li class="<?php echo $ACTIVE[0];?>">
                 <a href="<?php echo $PIKA_ROOT_DIR;?>index.php">
                     <i class="ace-icon glyphicon glyphicon-tags"></i>
-                    <span class="menu-text"> 系统介绍 </span>
+                    <span class="menu-text"> System Introduction </span>
                 </a>
 
                 <b class="arrow"></b>
@@ -127,7 +127,7 @@ if (!isset($ACTIVE)){
                 <a href="#" class="dropdown-toggle">
                     <i class="ace-icon glyphicon glyphicon-lock"></i>
                     <span class="menu-text">
-								暴力破解
+								Brute force cracking
 							</span>
 
                     <b class="arrow fa fa-angle-down"></b>
@@ -139,7 +139,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[2];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/burteforce/burteforce.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
 
                         <b class="arrow"></b>
@@ -147,7 +147,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[3];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/burteforce/bf_form.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            基于表单的暴力破解
+                            Based on the formOfBrute force cracking
                         </a>
 
                         <b class="arrow"></b>
@@ -156,7 +156,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[4];?>">
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/burteforce/bf_server.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            验证码绕过(on server)
+                            Captcha bypass(on server)
                         </a>
 
                         <b class="arrow"></b>
@@ -165,7 +165,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[5];?>">
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/burteforce/bf_client.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            验证码绕过(on client)
+                            Captcha bypass(on client)
                         </a>
 
                         <b class="arrow"></b>
@@ -174,7 +174,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[6];?>">
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/burteforce/bf_token.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            token防爆破?
+                            tokenAnti-brute force?
                         </a>
 
                         <b class="arrow"></b>
@@ -225,7 +225,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[8];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -234,7 +234,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[9];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_reflected_get.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            反射型xss(get)
+                            Reflectedxss(get)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -244,7 +244,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[10];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xsspost/post_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            反射型xss(post)
+                            Reflectedxss(post)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -253,7 +253,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[11];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_stored.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            存储型xss
+                            Storedxss
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -262,7 +262,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[12];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_dom.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            DOM型xss
+                            DOMTypexss
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -270,7 +270,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[12];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_dom_x.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            DOM型xss-x
+                            DOMTypexss-x
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -278,7 +278,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[13];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xssblind/xss_blind.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xss之盲打
+                            xssBlind Injection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -286,7 +286,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[14];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_01.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xss之过滤
+                            xssFiltering
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -294,7 +294,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[15];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_02.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xss之htmlspecialchars
+                            xssOnhtmlspecialchars
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -303,7 +303,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[16];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_03.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xss之href输出
+                            xssOnhrefOutput
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -312,7 +312,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[17];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xss/xss_04.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xss之js输出
+                            xssOnjsOutput
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -333,7 +333,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[26];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/csrf/csrf.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -381,7 +381,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[36];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -389,7 +389,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[37];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_id.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            数字型注入(post)
+                            NumberTypeInjection(post)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -397,7 +397,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[38];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_str.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            字符型注入(get)
+                            CharacterTypeInjection(get)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -405,7 +405,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[39];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_search.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            搜索型注入
+                            SearchTypeInjection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -413,7 +413,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[40];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_x.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            xx型注入
+                            xxTypeInjection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -421,7 +421,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[41];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_iu/sqli_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            "insert/update"注入
+                            "insert/update"Injection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -429,7 +429,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[42];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_del.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            "delete"注入
+                            "delete"Injection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -438,7 +438,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[43];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_header/sqli_header_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            "http header"注入
+                            "http header"Injection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -447,7 +447,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[44];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_blind_b.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            盲注(base on boolian)
+                            Blind injection(base on boolian)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -455,7 +455,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[45];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_blind_t.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            盲注(base on time)
+                            Blind injection(base on time)
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -463,7 +463,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[46];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/sqli/sqli_widebyte.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            宽字节注入
+                            Wide byteInjection
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -486,7 +486,7 @@ if (!isset($ACTIVE)){
                 <li class="<?php echo $ACTIVE[51];?>" >
                     <a href="<?php echo $PIKA_ROOT_DIR;?>vul/rce/rce.php">
                         <i class="menu-icon fa fa-caret-right"></i>
-                        概述
+                        Overview
                     </a>
                     <b class="arrow"></b>
                 </li>
@@ -524,7 +524,7 @@ if (!isset($ACTIVE)){
                 <li class="<?php echo $ACTIVE[56];?>" >
                     <a href="<?php echo $PIKA_ROOT_DIR;?>vul/fileinclude/fileinclude.php">
                         <i class="menu-icon fa fa-caret-right"></i>
-                        概述
+                        Overview
                     </a>
                     <b class="arrow"></b>
                 </li>
@@ -563,7 +563,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[61];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/unsafedownload/unsafedownload.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -593,7 +593,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[66];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/unsafeupload/upload.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -640,7 +640,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[74];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/overpermission/op.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -648,7 +648,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[75];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/overpermission/op1/op1_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            水平越权
+                            Horizontal privilege escalation
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -656,7 +656,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[76];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/overpermission/op2/op2_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            垂直越权
+                            Vertical privilege escalation
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -679,7 +679,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[81];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/dir/dir.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -687,7 +687,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[82];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/dir/dir_list.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            目录遍历
+                            Directory traversal
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -699,7 +699,7 @@ if (!isset($ACTIVE)){
                 <a href="#" class="dropdown-toggle">
                     <i class="ace-icon glyphicon glyphicon-camera"></i>
                     <span class="menu-text">
-                敏感信息泄露
+                Sensitive information leakage
             </span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -709,7 +709,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[86];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/infoleak/infoleak.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -731,7 +731,7 @@ if (!isset($ACTIVE)){
                 <a href="#" class="dropdown-toggle">
                     <i class="ace-icon glyphicon glyphicon-align-left"></i>
                     <span class="menu-text">
-                        PHP反序列化
+                        PHPDeserialization
                     </span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -741,7 +741,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[91];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/unserilization/unserilization.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -749,7 +749,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[92];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/unserilization/unser.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            PHP反序列化漏洞
+                            PHPDeserialization vulnerability
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -772,7 +772,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[96];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xxe/xxe.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -780,7 +780,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[97];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/xxe/xxe_1.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            XXE漏洞
+                            XXEVulnerability
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -792,7 +792,7 @@ if (!isset($ACTIVE)){
                 <a href="#" class="dropdown-toggle">
                     <i class="ace-icon glyphicon glyphicon-repeat"></i>
                     <span class="menu-text">
-                URL重定向
+                URLRedirect
             </span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -802,7 +802,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[101];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/urlredirect/unsafere.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -810,7 +810,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[102];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/urlredirect/urlredirect.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            不安全的URL跳转
+                            InsecureURLRedirect
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -832,7 +832,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[106];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>vul/ssrf/ssrf.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            Overview
                         </a>
                         <b class="arrow"></b>
                     </li>
@@ -863,7 +863,7 @@ if (!isset($ACTIVE)){
                 <a href="#" class="dropdown-toggle">
                     <i class="ace-icon glyphicon glyphicon-cog"></i>
                     <span class="menu-text">
-                管理工具
+                Management tool
                     </span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -873,7 +873,7 @@ if (!isset($ACTIVE)){
                     <li class="<?php echo $ACTIVE[121];?>" >
                         <a href="<?php echo $PIKA_ROOT_DIR;?>pkxss/index.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            XSS后台
+                            XSSBackground
                         </a>
                         <b class="arrow"></b>
                     </li>

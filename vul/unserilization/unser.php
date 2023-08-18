@@ -28,7 +28,7 @@ $html='';
 if(isset($_POST['o'])){
     $s = $_POST['o'];
     if(!@$unser = unserialize($s)){
-        $html.="<p>大兄弟,来点劲爆点儿的!</p>";
+        $html.="<p>Big,ComePointPointOf!</p>";
     }else{
         $html.="<p>{$unser->test}</p>";
     }
@@ -44,21 +44,21 @@ if(isset($_POST['o'])){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="unserilization.php">PHP反序列化</a>
+                    <a href="unserilization.php">PHPDeserialization</a>
                 </li>
-                <li class="active">概述</li>
+                <li class="active">Overview</li>
             </ul>
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先把PHP序列化和反序列化搞懂了在来玩">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstPutPHPAndDeserializationEngageUnderstandHasInCome">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">
             <form method="post">
-                <p>这是一个接受序列化数据的api:
+                <p>IsOneDataOfapi:
                     <input type="text" name="o" />
-                    <input type="submit" value="提交">
+                    <input type="submit" value="Submit">
 
             </form>
             <?php echo $html;?>

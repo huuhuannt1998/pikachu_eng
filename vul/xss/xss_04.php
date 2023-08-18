@@ -21,12 +21,12 @@ $jsvar='';
 $html='';
 
 
-//这里讲输入动态的生成到了js中,形成xss
-//javascript里面是不会对tag和字符实体进行解释的,所以需要进行js转义
+//HereInputOfGenerateToHasjsIn,Formxss
+//javascriptInsideIsNotWillTotagAndCharacterGoLineSolutionOf,SoAsToGoLinejsEscape
 
-//讲这个例子主要是为了让你明白,输出点在js中的xss问题,应该怎么修?
-//这里如果进行html的实体编码,虽然可以解决XSS的问题,但是实体编码后的内容,在JS里面不会进行翻译,这样会导致前端的功能无法使用。
-//所以在JS的输出点应该使用\对特殊字符进行转义
+//ThisToIsForHasYou,OutputPointInjsIn thexssProblem,Should?
+//HereSuch asResultGoLinehtmlOfCode,AlthoughCanSolutionXSSOfProblem,ButIsCodeOf,InJSInsideNotWillGoLine,WillLead toBeforeEndOfAchievementCanNoUse。
+//SoAsInJSOfOutputPointShouldUse\ToCharacterGoLineEscape
 
 
 if(isset($_GET['submit']) && $_GET['message'] !=null){
@@ -48,12 +48,12 @@ if(isset($_GET['submit']) && $_GET['message'] !=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">xss之js输出</li>
+                <li class="active">xssOnjsOutput</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="输入被动态的生成到了javascript中,如何是好。输入tmac试试-_-">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="InputByOfGenerateToHasjavascriptIn,Such asIs。Inputtmac-_-">
+                PointOnceTip~
             </a>
 
 
@@ -81,10 +81,10 @@ if(isset($_GET['submit']) && $_GET['message'] !=null){
     $ms='<?php echo $jsvar;?>';
     if($ms.length != 0){
         if($ms == 'tmac'){
-            $('#fromjs').text('tmac确实厉害,看那小眼神..')
+            $('#fromjs').text('tmac,LookThatSmall..')
         }else {
 //            alert($ms);
-            $('#fromjs').text('无论如何不要放弃心中所爱..')
+            $('#fromjs').text('NoSuch asNotToInSo..')
         }
 
     }

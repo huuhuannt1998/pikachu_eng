@@ -8,7 +8,7 @@ include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 $link=connect();
 
-//设置允许被跨域访问
+//SettingByVisit
 header("Access-Control-Allow-Origin:*");
 
 $data = $_POST['datax'];

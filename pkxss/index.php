@@ -14,7 +14,7 @@ catch(Exception $e)
     $html.=
         "<p >
         <a href='pkxss_install.php' style='color:red;'>
-        提示:欢迎使用xss后台，点击进行初始化安装!
+        Tip:Welcome to usexssBackground，Click to initialize and install!
         </a>
     </p>";
 }
@@ -34,12 +34,12 @@ if (@$link)
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>pikachu Xss 后台</title>
+    <title>pikachu Xss Background</title>
     <link rel="stylesheet" type="text/css" href="pkxss.css"/>
 </head>
 <body>
 <div id="title">
-    <h1>欢迎使用 pikachu Xss 后台</h1>
+    <h1>Welcome to use pikachu Xss Background</h1>
     <?php echo $html;?>
 </div>
 </body>

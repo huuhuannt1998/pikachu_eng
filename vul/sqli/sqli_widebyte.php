@@ -26,12 +26,12 @@ $html='';
 if(isset($_POST['submit']) && $_POST['name']!=null){
 
     $name = escape($link,$_POST['name']);
-    $query="select id,email from member where username='$name'";//这里的变量是字符型，需要考虑闭合
-    //设置mysql客户端来源编码是gbk,这个设置导致出现宽字节注入问题
+    $query="select id,email from member where username='$name'";//HereOfChangeVolumeIsCharacterType，To
+    //SettingmysqlUserEndComeSourceCodeIsgbk,ThisSettingLead toWide byteInjectionProblem
     $set = "set character_set_client=gbk";
     execute($link,$set);
 
-    //mysqi_query不打印错误描述
+    //mysqi_queryNotError
     $result=mysqli_query($link, $query);
     if(mysqli_num_rows($result) >= 1){
         while ($data=mysqli_fetch_assoc($result)){
@@ -40,7 +40,7 @@ if(isset($_POST['submit']) && $_POST['name']!=null){
             $html.="<p class='notice'>your uid:{$id} <br />your email is: {$email}</p>";
         }
     }else{
-        $html.="<p class='notice'>您输入的username不存在，请重新输入！</p>";
+        $html.="<p class='notice'>YouInputOfusernameNotStoreIn，PleaseAgainNewInput！</p>";
     }
 
 
@@ -59,11 +59,11 @@ if(isset($_POST['submit']) && $_POST['name']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">wide byte注入</li>
+                <li class="active">wide byteInjection</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="kobe/123456,先搜索下什么是宽字节注入搞懂了在来测试吧">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="kobe/123456,FirstSearchNextIsWide byteInjectionEngageUnderstandHasInComeBar">
+                PointOnceTip~
             </a>
 
 
@@ -73,7 +73,7 @@ if(isset($_POST['submit']) && $_POST['name']!=null){
                 <p class="sqli_title">what's your username?</p>
                 <form method="post">
                     <input class="sqli_in" type="text" name="name" />
-                    <input class="sqli_submit" type="submit" name="submit" value="查询" />
+                    <input class="sqli_submit" type="submit" name="submit" value="Check" />
                 </form>
                 <?php echo $html;?>
             </div>

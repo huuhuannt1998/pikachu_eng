@@ -18,7 +18,7 @@ include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
 
 $link=connect();
 
-//判断是是否登录，如果已经登录，点击时，直接进入会员中心
+//JudgeIsIsIs logged in?，Such asResult，ClickWhen，EnterMemberIn
 if(check_op_login($link)){
     header("location:op1_mem.php");
 }
@@ -28,7 +28,7 @@ $html='';
 if(isset($_POST['submit'])){
     if($_POST['username']!=null && $_POST['password']!=null){
         $username=escape($link, $_POST['username']);
-        $password=escape($link, $_POST['password']);//转义，防注入
+        $password=escape($link, $_POST['password']);//Escape，Injection
         $query="select * from member where username='$username' and pw=md5('$password')";
         $result=execute($link, $query);
         if(mysqli_num_rows($result)==1){
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
             $_SESSION['op']['password']=sha1(md5($password));
             header("location:op1_mem.php");
         }else{
-            $html.="<p>登录失败,请重新登录</p>";
+            $html.="<p>Failure,PleaseAgainNew</p>";
         }
 
     }
@@ -58,9 +58,9 @@ if(isset($_POST['submit'])){
                 </li>
                 <li class="active">op1 login</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="lucy/123456,lili/123456,kobe/123456">
-                点一下提示~
+                PointOnceTip~
             </a>
 
         </div>

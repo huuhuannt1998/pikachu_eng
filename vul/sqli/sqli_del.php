@@ -22,25 +22,25 @@ include_once $PIKA_ROOT_DIR . "inc/mysql.inc.php";
 $link=connect();
 $html='';
 if(array_key_exists("message",$_POST) && $_POST['message']!=null){
-    //插入转义
+    //Escape
     $message=escape($link, $_POST['message']);
     $query="insert into message(content,time) values('$message',now())";
     $result=execute($link, $query);
     if(mysqli_affected_rows($link)!=1){
-        $html.="<p>出现异常，提交失败！</p>";
+        $html.="<p>，SubmitFailure！</p>";
     }
 }
 
 
 // if(array_key_exists('id', $_GET) && is_numeric($_GET['id'])){
-//没对传进来的id进行处理，导致DEL注入
+//NoToTransferGoComeOfidGoLine，Lead toDELInjection
 if(array_key_exists('id', $_GET)){
     $query="delete from message where id={$_GET['id']}";
     $result=execute($link, $query);
     if(mysqli_affected_rows($link)==1){
         header("location:sqli_del.php");
     }else{
-        $html.="<p style='color: red'>删除失败,检查下数据库是不是挂了</p>";
+        $html.="<p style='color: red'>ExceptFailure,CheckNextDatabaseIsNotIsHas</p>";
     }
 }
 
@@ -59,11 +59,11 @@ if(array_key_exists('id', $_GET)){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">delete注入</li>
+                <li class="active">deleteInjection</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="删除留言的的时候,好像有点问题">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="ExceptOfOfWhen,There's a problem">
+                PointOnceTip~
             </a>
 
 
@@ -71,7 +71,7 @@ if(array_key_exists('id', $_GET)){
         <div class="page-content">
 
             <div id="sqli_del_main">
-                <p class="sqli_del_title">我是一个不正经的留言板：</p>
+                <p class="sqli_del_title">IsOneNotOfMessage board：</p>
                 <form method="post">
                     <textarea class="sqli_del_in" name="message"></textarea><br />
                     <input class="sqli_del_submit" type="submit" name="submit" value="submit" />
@@ -79,15 +79,15 @@ if(array_key_exists('id', $_GET)){
                 <?php echo $html;?>
                 <br />
                 <div id="show_message">
-                    <p class="line">留言列表：</p>
+                    <p class="line">Table：</p>
 
                     <?php
                     $query="select * from message";
                     $result=execute($link, $query);
                     while($data=mysqli_fetch_assoc($result)){
-                        //输出转义，防XSS
+                        //OutputEscape，XSS
                         $content=htmlspecialchars($data['content'],ENT_QUOTES);
-                        echo "<p class='con'>{$content}</p><a href='sqli_del.php?id={$data['id']}'>删除</a>";
+                        echo "<p class='con'>{$content}</p><a href='sqli_del.php?id={$data['id']}'>Except</a>";
                     }
                     ?>
                 </div>

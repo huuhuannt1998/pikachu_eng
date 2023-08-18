@@ -20,9 +20,9 @@ include_once $PIKA_ROOT_DIR . "inc/mysql.inc.php";
 
 
 $link=connect();
-// 判断是否登录，没有登录不能访问
+// JudgeIsIs logged in?，NoNotCanVisit
 if(!check_sqli_session($link)){
-    echo "<script>alert('登录后才能进入会员中心哦')</script>";
+    echo "<script>alert('CanEnterMemberInOh')</script>";
     header("location:sqli_login.php");
 }
 
@@ -46,11 +46,11 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">会员信息</li>
+                <li class="active">MemberInformation</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="">
-                点一下提示~
+                PointOnceTip~
             </a>
 
 
@@ -59,7 +59,7 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
 
 
             <?php
-            //通过当前session-name到数据库查询，并显示其对应信息
+            //ThroughWhenBeforesession-nameToDatabaseCheck，AndDisplayItsCorrespondingInformation
             $username=$_SESSION['sqli']['username'];
             $query="select * from member where username='$username'";
             $result=execute($link, $query);
@@ -72,13 +72,13 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
 
             $html=<<<A
 <div id="per_info">
-   <h1 class="per_title">hello,{$name},欢迎来到个人会员中心 | <a style="color:bule;" href="sqli_mem.php?logout=1">退出登录</a></h1>
-   <p class="per_name">姓名:{$name}</p>
-   <p class="per_sex">性别:{$sex}</p>
-   <p class="per_phone">手机:{$phonenum}</p>    
-   <p class="per_add">住址:{$add}</p> 
-   <p class="per_email">邮箱:{$email}</p> 
-   <a class="edit" href="sqli_edit.php">修改个人信息</a>
+   <h1 class="per_title">hello,{$name},WelcomeComeToPersonMemberIn | <a style="color:bule;" href="sqli_mem.php?logout=1"></a></h1>
+   <p class="per_name">Name:{$name}</p>
+   <p class="per_sex">:{$sex}</p>
+   <p class="per_phone">Mobile phone:{$phonenum}</p>    
+   <p class="per_add">:{$add}</p> 
+   <p class="per_email">:{$email}</p> 
+   <a class="edit" href="sqli_edit.php">ModifyPersonInformation</a>
 </div>
 A;
             echo $html;

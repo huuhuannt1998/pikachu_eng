@@ -25,9 +25,9 @@ include_once $PIKA_ROOT_DIR.'header.php';
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">Brute force cracking</a>
                 </li>
-                <li class="active">Burte Force概述</li>
+                <li class="active">Burte ForceOverview</li>
             </ul><!-- /.breadcrumb -->
 
         </div>
@@ -36,34 +36,34 @@ include_once $PIKA_ROOT_DIR.'header.php';
 
 <div id="vul_info">
     <dl>
-        <dt class="vul_title">Burte Force（暴力破解）概述</dt>
+        <dt class="vul_title">Burte Force（Brute force cracking）Overview</dt>
         <dd class="vul_detail">
-            “暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。
-            其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。
-            为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作。
+            “Brute force cracking”Is an attack tool，InwebAttackIn，GenerallyUseThis means for the application systemOfAuthenticationInformationGoLineObtain。
+            The process isUseBigVolumeOfAuthenticationInformationInAuthenticationInterfaceGoLineTry to log in，Until the correctOfEndResult。
+            ForHasImproveEffectRate，Brute force crackingGenerallyUseWith a dictionaryOfTools for automated operations。
         </dd>
         <dd class="vul_detail">
-            理论上来说，大多数系统都是可以被暴力破解的，只要攻击者有足够强大的计算能力和时间，所以断定一个系统是否存在暴力破解漏洞，其条件也不是绝对的。
-            我们说一个web应用系统存在暴力破解漏洞，一般是指该web应用系统没有采用或者采用了比较弱的认证安全策略，导致其被暴力破解的“可能性”变的比较高。
-            这里的认证安全策略, 包括：</dd>
+            TheoryOnComeSay，BigMost systemsAllIsCanByBrute force crackingOf，OnlyToAttackPersonHaveStrong enoughBigOfComputational ability and time，SoAsDeterminedOneSystemIsNoStoreInBrute force crackingVulnerability，Its conditionsAlsoNotIs absoluteOf。
+            WeSayOnewebApplication systemStoreInBrute force crackingVulnerability，Generally refers to thewebApplication systemNoAdoptOrAdoptHasComparedWeakerOfAuthenticationSafetyStrategy，Causing itsByBrute force crackingOf“Possibility”ChangeOfComparedHigher。
+            HereOfAuthenticationSafetyStrategy, Include：</dd>
         <dd class="vul_detail_1">
 
-            1.是否要求用户设置复杂的密码；<br />
-            2.是否每次认证都使用安全的验证码（想想你买火车票时输的验证码～）或者手机otp；<br />
-            3.是否对尝试登录的行为进行判断和限制（如：连续5次错误登录，进行账号锁定或IP地址锁定等）；<br />
-            4.是否采用了双因素认证；<br />
-            ...等等。<br />
+            1.Whether to require usersSettingComplexOfPassword；<br />
+            2.IsNoevery timeAuthenticationAllUseSafetyOfVerificationCode（Think about itYouWhen buying a train ticket, inputOfVerificationCode～）OrMobile phoneotp；<br />
+            3.Whether to try to log inOfLineForGoLineJudgeAndLimit（Such as：Continuous5Wrong login times，GoLineAccountLockOrIPAddressLockand so on）；<br />
+            4.IsNoAdoptHasTwo-factorAuthentication；<br />
+            ...and so onand so on。<br />
 
 
-            千万不要小看暴力破解漏洞,往往这种简单粗暴的攻击方式带来的效果是超出预期的!<br />
+            MillionsNotToSmallLookBrute force crackingVulnerability,ToToThis simpleSingleRudeOfAttackMethodBringComeOfEffectResultExceeds expectationsOf!<br />
 
             <br />
 
-            你可以通过“BurteForce”对应的测试栏目，来进一步的了解该漏洞。
+            YouCanThrough“BurteForce”CorrespondingOfTest column，ComeGoOneStepOfHasSolve thisVulnerability。
         </dd>
 
             <br/>
-            <p style="color:dimgrey; font-size: 18px">从来没有哪个时代的黑客像今天一样热衷于猜解密码  ---奥斯特洛夫斯基</p>
+            <p style="color:dimgrey; font-size: 18px">FromComeNoWhich eraOfHackers are as keen on guessing as they are todayPassword  ---Ostrovsky</p>
 
     </dl>
 </div>

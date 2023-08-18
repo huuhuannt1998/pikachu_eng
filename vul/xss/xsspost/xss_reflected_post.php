@@ -33,16 +33,16 @@ if(!$is_login_id){
 
 }
 
-$state = '你已经登陆成功,<a href="xss_reflected_post.php?logout=1">退出登陆</a>';
+$state = 'YouSuccessful,<a href="xss_reflected_post.php?logout=1"></a>';
 $html='';
 if(isset($_POST['submit'])){
     if(empty($_POST['message'])){
-        $html.="<p class='notice'>输入'kobe'试试-_-</p>";
+        $html.="<p class='notice'>Input'kobe'-_-</p>";
     }else{
 
-        //下面直接将前端输入的参数原封不动的输出了,出现xss
+        //NextSurfaceWillBeforeEndInputOfParameterNotOfOutputHas,xss
         if($_POST['message']=='kobe'){
-            $html.="<p class='notice'>愿你和{$_POST['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
+            $html.="<p class='notice'>YouAnd{$_POST['message']}One，，！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
         }else{
             $html.="<p class='notice'>who is {$_POST['message']},i don't care!</p>";
         }
@@ -71,12 +71,12 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../xss.php">xss</a>
                 </li>
-                <li class="active">xss概述</li>
+                <li class="active">xssOverview</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="问题还是那个问题,只是提交方式变成了post,怎么利用?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="ProblemStillThatProblem,OnlyIsSubmitMethodChangeHaspost,BenefitUse?">
+                PointOnceTip~
             </a>
 
         </div>

@@ -45,7 +45,7 @@ function show() {
             if (ajax.status == 200) {
                 var data = ajax.responseText;
             } else {
-                alert("页面请求失败");
+                alert("PagePleasePleaseFailure");
             }
         }
     }

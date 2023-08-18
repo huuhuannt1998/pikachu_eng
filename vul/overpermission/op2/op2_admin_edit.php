@@ -17,21 +17,21 @@ include_once $PIKA_ROOT_DIR.'inc/function.php';
 include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
 
 $link=connect();
-// 判断是否登录，没有登录不能访问
-//这里只是验证了登录状态，并没有验证级别，所以存在越权问题。
+// JudgeIsIs logged in?，NoNotCanVisit
+//HereOnlyIsVerificationHas，AndNoVerification，SoAsStoreInProblem。
 if(!check_op2_login($link)){
     header("location:op2_login.php");
     exit();
 }
 if(isset($_POST['submit'])){
-    if($_POST['username']!=null && $_POST['password']!=null){//用户名密码必填
-        $getdata=escape($link, $_POST);//转义
+    if($_POST['username']!=null && $_POST['password']!=null){//UsernamePassword
+        $getdata=escape($link, $_POST);//Escape
         $query="insert into member(username,pw,sex,phonenum,email,address) values('{$getdata['username']}',md5('{$getdata['password']}'),'{$getdata['sex']}','{$getdata['phonenum']}','{$getdata['email']}','{$getdata['address']}')";
         $result=execute($link, $query);
-        if(mysqli_affected_rows($link)==1){//判断是否插入
+        if(mysqli_affected_rows($link)==1){//JudgeIsNo
             header("location:op2_admin.php");
         }else {
-            $html.="<p>修改失败,请检查下数据库是不是还是活着的</p>";
+            $html.="<p>ModifyFailure,Please checkNextDatabaseIsNotIsStillOf</p>";
 
         }
     }
@@ -64,24 +64,24 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
                 </li>
                 <li class="active">op2 admin edit</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="想知道当超级boss是什么滋味吗">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="WhenbossIsRight?">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
             <div id="edit_main">
-                <p class="edit_title">hi,<?php if($_SESSION['op2']['username']){echo $_SESSION['op2']['username'];} ?>,欢迎来到后台管理中心 | <a style="color:bule;" href="op2_admin_edit.php?logout=1">退出登录</a>|<a href="op2_admin.php">回到admin</a></p>
+                <p class="edit_title">hi,<?php if($_SESSION['op2']['username']){echo $_SESSION['op2']['username'];} ?>,WelcomeComeToBackgroundIn | <a style="color:bule;" href="op2_admin_edit.php?logout=1"></a>|<a href="op2_admin.php">Toadmin</a></p>
 
                 <form class="from_main" method="post">
-                    <label>用户:<br /><input type="text" name="username" placeholder="必填"/></label><br />
-                    <label>密码:<br /><input type="password" name="password" placeholder="必填"/></label><br />
-                    <label>性别:<br /><input type="text" name="sex" /></label><br />
-                    <label>电话:<br /><input type="text" name="phonenum" /></label><br />
-                    <label>邮箱:<br /><input type="text" name="email" /></label><br />
-                    <label>地址:<br /><input type="text" name="address" /></label><br />
-                    <input class="sub" type="submit" name="submit" value="创建" />
+                    <label>UseUser:<br /><input type="text" name="username" placeholder=""/></label><br />
+                    <label>Password:<br /><input type="password" name="password" placeholder=""/></label><br />
+                    <label>:<br /><input type="text" name="sex" /></label><br />
+                    <label>:<br /><input type="text" name="phonenum" /></label><br />
+                    <label>:<br /><input type="text" name="email" /></label><br />
+                    <label>Address:<br /><input type="text" name="address" /></label><br />
+                    <input class="sub" type="submit" name="submit" value="Create" />
                 </form>
 
 

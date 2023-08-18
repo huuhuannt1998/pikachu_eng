@@ -21,7 +21,7 @@ include_once $PIKA_ROOT_DIR.'header.php';
 $link=connect();
 $html="";
 
-//典型的问题,没有验证码,没有其他控制措施,可以暴力破解
+//DictionaryTypeOfProblem,NoVerificationCode,NoOtherControl measures,CanBrute force cracking
 if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){
 
     $username = $_POST['username'];
@@ -42,7 +42,7 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){
         }
 
     } else{
-        $html.= '<p>执行错误:'.$line_pre->errno.'错误信息:'.$line_pre->error.'</p>';
+        $html.= '<p>HoldLineError:'.$line_pre->errno.'ErrorInformation:'.$line_pre->error.'</p>';
     }
 
 }
@@ -58,17 +58,17 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">Brute force cracking</a>
                 </li>
-                <li class="active">基于表单的暴力破解</li>
+                <li class="active">Based on the formOfBrute force cracking</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="这里一共有三个用户：
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="HereOnetotalHaveThreeUseUser：
                 admin/123456
                 pikachu/000000
                 test/abc123">
-                点一下提示~
+                PointOnceTip~
             </a>
 
         </div>

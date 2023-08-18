@@ -20,12 +20,12 @@ $html1='';
 $html2='';
 if(isset($_GET['submit'])){
     if(empty($_GET['message'])){
-        $html.="<p class='notice'>输入点啥吧！</p>";
+        $html.="<p class='notice'>InputPointBar！</p>";
     }else {
-        //使用了htmlspecialchars进行处理,是不是就没问题了呢,htmlspecialchars默认不对'处理
+        //UseHashtmlspecialcharsGoLine,IsNotIsJustNoProblemHas,htmlspecialcharsDefaultNotTo'
         $message=htmlspecialchars($_GET['message']);
-        $html1.="<p class='notice'>你的输入已经被记录:</p>";
-        //输入的内容被处理后输出到了input标签的value属性里面,试试:' onclick='alert(111)'
+        $html1.="<p class='notice'>YouOfInputBy:</p>";
+        //InputOfByOutputToHasinputOfvalueAttributeInside,:' onclick='alert(111)'
 //        $html2.="<input class='input' type='text' name='inputvalue' readonly='readonly' value='{$message}' style='margin-left:120px;display:block;background-color:#c0c0c0;border-style:none;'/>";
         $html2.="<a href='{$message}'>{$message}</a>";
     }
@@ -42,19 +42,19 @@ if(isset($_GET['submit'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">xss之htmlspecialchars</li>
+                <li class="active">xssOnhtmlspecialchars</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先去查一下htmlspecialchars这个方法的含义">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstCheckOncehtmlspecialcharsThisOf">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
 
             <div id="xssr_main">
-                <p class="xssr_title">人生之所有苦短,是因为你的xss学习的还不够好</p>
+                <p class="xssr_title">PersonOnSoHave,IsForYouOfxssOfAlsoNot</p>
                 <form method="get">
                     <input class="xssr_in" type="text" name="message" />
 

@@ -1,5 +1,5 @@
 <?php 
-//验证码
+//VerificationCode
 function vcode($width=120,$height=40,$fontSize=30,$countElement=5,$countPixel=100,$countLine=4){
 	header('Content-type:image/jpeg');
 	$element=array('a','b','c','d','e','f','g','h','i','j','k','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9');
@@ -25,7 +25,7 @@ function vcode($width=120,$height=40,$fontSize=30,$countElement=5,$countPixel=10
 	return $string;
 }
 
-//之前的验证码有点问题，重新从网上搜了一个简单的验证码函数，是的，从网上搜的。
+//OnBeforeOfVerificationCodeThere's a problem，AgainNewFrom the webOnSearchHasOneSimpleSingleOfVerificationCodeFunction，IsOf，From the webOnSearchOf。
 function vcodex(){
 	
 	$string = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -37,35 +37,35 @@ function vcodex(){
     //session_start();
     //$_SESSION['img_number'] = $str;
 	
-	$img_handle = Imagecreate(80, 20);  //图片大小80X20
-    	$back_color = ImageColorAllocate($img_handle, 255, 255, 255); //背景颜色（白色）
-    	$txt_color = ImageColorAllocate($img_handle, 0,0, 0);  //文本颜色（黑色）
+	$img_handle = Imagecreate(80, 20);  //PictureBigSmall80X20
+    	$back_color = ImageColorAllocate($img_handle, 255, 255, 255); //Background color（White）
+    	$txt_color = ImageColorAllocate($img_handle, 0,0, 0);  //Text color（Black）
     
-    //加入干扰线
+    //Add interference lines
     	for($i=0;$i<3;$i++)
     	{
         	$line = ImageColorAllocate($img_handle,rand(0,255),rand(0,255),rand(0,255));
         	Imageline($img_handle, rand(0,15), rand(0,15), rand(100,150),rand(10,50), $line);
     	}
-    //加入干扰象素
+    //Add interference pixels
     	for($i=0;$i<200;$i++) 
     	{
         	$randcolor = ImageColorallocate($img_handle,rand(0,255),rand(0,255),rand(0,255));
         	Imagesetpixel($img_handle, rand()%100 , rand()%50 , $randcolor);
     	}
 	
-	Imagefill($img_handle, 0, 0, $back_color);             //填充图片背景色
-    	ImageString($img_handle, 28, 10, 0, $str, $txt_color);//水平填充一行字符串
+	Imagefill($img_handle, 0, 0, $back_color);             //FillPictureBackground color
+    	ImageString($img_handle, 28, 10, 0, $str, $txt_color);//HorizontalFillOneLineCharacterString
 	
-	ob_clean();   // ob_clean()清空输出缓存区    
-    	header("Content-type: image/png"); //生成验证码图片    
-    	Imagepng($img_handle);//显示图片
+	ob_clean();   // ob_clean()ClearEmptyOutputSlowStoreArea    
+    	header("Content-type: image/png"); //GenerateVerificationCodePicture    
+    	Imagepng($img_handle);//DisplayPicture
 	return $str;
 	
 }
 
 
-//生成一个token,以当前微妙时间+一个5位的前缀
+//GenerateOnetoken,AsWhenBeforeMicrosecond time+One5PositionOfBeforeSuffix
 function set_token(){
     if(isset($_SESSION['token'])){
        unset($_SESSION['token']);
@@ -76,7 +76,7 @@ function set_token(){
 
 
 
-//跳转页面
+//RedirectPage
 function skip($notice,$url){
 $html=<<<A
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -88,7 +88,7 @@ $html=<<<A
 <link rel="stylesheet" type="text/css" href="../../../style/header.css"/>
 </head>
 <body>
-<p id='op_notice'>{$notice} | <a href='{$url}'>点击快速返回</a></p>
+<p id='op_notice'>{$notice} | <a href='{$url}'>ClickQuick return</a></p>
 </body>
 </html>
 A;
@@ -96,7 +96,7 @@ echo $html;
 exit();
 }
 
-//在访问一个页面时，先验证是否登录,csrf里面，使用的是session验证
+//InVisitOnePageWhen，FirstVerificationIsIs logged in?,csrfInside，UseOfIssessionVerification
 function check_csrf_login($link){
     if(isset($_SESSION['csrf']['username']) && isset($_SESSION['csrf']['password'])){
         $query="select * from member where username='{$_SESSION['csrf']['username']}' and sha1(pw)='{$_SESSION['csrf']['password']}'";
@@ -112,7 +112,7 @@ function check_csrf_login($link){
 }
 
 
-//在访问一个页面时，先验证是否登录,sqli的insert,update问题里面，使用的是session验证
+//InVisitOnePageWhen，FirstVerificationIsIs logged in?,sqliOfinsert,updateProblemInside，UseOfIssessionVerification
 function check_sqli_session($link){
     if(isset($_SESSION['sqli']['username']) && isset($_SESSION['sqli']['password'])){
         $query="select * from member where username='{$_SESSION['sqli']['username']}' and sha1(pw)='{$_SESSION['sqli']['password']}'";
@@ -128,10 +128,10 @@ function check_sqli_session($link){
 }
 
 
-//在访问一个页面时，先验证是否登录,sqli里面，使用的是cookie验证
+//InVisitOnePageWhen，FirstVerificationIsIs logged in?,sqliInside，UseOfIscookieVerification
 function check_sqli_login($link){
     if(isset($_COOKIE['ant']['uname']) && isset($_COOKIE['ant']['pw'])){
-        //这里如果不对获取的cookie进行转义，则会存在SQL注入漏洞，也会导致验证被绕过
+        //HereSuch asResultNotToObtainOfcookieGoLineEscape，ThenWillStoreInSQLInjection vulnerability，AlsoWillLead toVerificationByBypass
         //$username=escape($link, $_COOKIE['ant']['username']);
         //$password=escape($link, $_COOKIE['ant']['password']);
         $username=$_COOKIE['ant']['uname'];
@@ -152,10 +152,10 @@ function check_sqli_login($link){
     }
 }
 
-/*xss里面的logincheck*/
+/*xssInsideOflogincheck*/
 function check_xss_login($link){
     if(isset($_COOKIE['ant']['uname']) && isset($_COOKIE['ant']['pw'])){
-        //这里如果不对获取的cookie进行转义，则会存在SQL注入漏洞，也会导致验证被绕过
+        //HereSuch asResultNotToObtainOfcookieGoLineEscape，ThenWillStoreInSQLInjection vulnerability，AlsoWillLead toVerificationByBypass
         $username=escape($link, $_COOKIE['ant']['uname']);
         $password=escape($link, $_COOKIE['ant']['pw']);
 //         $username=$_COOKIE['ant']['uname'];
@@ -172,7 +172,7 @@ function check_xss_login($link){
         return false;
     }
 }
-/*op1的check login*/
+/*op1Ofcheck login*/
 function check_op_login($link){
     if(isset($_SESSION['op']['username']) && isset($_SESSION['op']['password'])){
         $query="select * from member where username='{$_SESSION['op']['username']}' and sha1(pw)='{$_SESSION['op']['password']}'";
@@ -187,7 +187,7 @@ function check_op_login($link){
     }
 }
 
-/*op2的check login*/
+/*op2Ofcheck login*/
 function check_op2_login($link){
     if(isset($_SESSION['op2']['username']) && isset($_SESSION['op2']['password'])){
         $query="select * from users where username='{$_SESSION['op2']['username']}' and sha1(password)='{$_SESSION['op2']['password']}'";

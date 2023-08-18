@@ -20,10 +20,10 @@ $result='';
 
 if(isset($_POST['submit']) && $_POST['ipaddress']!=null){
     $ip=$_POST['ipaddress'];
-//     $check=explode('.', $ip);可以先拆分，然后校验数字以范围，第一位和第四位1-255，中间两位0-255
+//     $check=explode('.', $ip);CanFirst，HoweverNumberAs，TheOnePositionAndThePosition1-255，InPosition0-255
     if(stristr(php_uname('s'), 'windows')){
 //         var_dump(php_uname('s'));
-        $result.=shell_exec('ping '.$ip);//直接将变量拼接进来，没做处理
+        $result.=shell_exec('ping '.$ip);//WillChangeVolumeGoCome，NoDo
     }else {
         $result.=shell_exec('ping -c 4 '.$ip);
     }
@@ -45,9 +45,9 @@ if(isset($_POST['submit']) && $_POST['ipaddress']!=null){
                 </li>
                 <li class="active">exec "ping"</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="想一下ping命令在系统上是怎么用的">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="OncepingInSystemOnIsUseOf">
+                PointOnceTip~
             </a>
 
 

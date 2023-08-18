@@ -22,11 +22,11 @@ $link=connect();
 $html='';
 
 if(isset($_POST['submit']) && $_POST['id']!=null){
-    //这里没有做任何处理，直接拼到select里面去了,形成Sql注入
+    //HereNoDo，ToselectInsideHas,FormSqlInjection
     $id=$_POST['id'];
     $query="select username,email from member where id=$id";
     $result=execute($link, $query);
-    //这里如果用==1,会严格一点
+    //HereSuch asResultUse==1,WillStrictOnePoint
     if(mysqli_num_rows($result)>=1){
         while($data=mysqli_fetch_assoc($result)){
             $username=$data['username'];
@@ -34,7 +34,7 @@ if(isset($_POST['submit']) && $_POST['id']!=null){
             $html.="<p class='notice'>hello,{$username} <br />your email is: {$email}</p>";
         }
     }else{
-        $html.="<p class='notice'>您输入的user id不存在，请重新输入！</p>";
+        $html.="<p class='notice'>YouInputOfuser idNotStoreIn，PleaseAgainNewInput！</p>";
     }
 }
 
@@ -51,12 +51,12 @@ if(isset($_POST['submit']) && $_POST['id']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="sqli.php">sqli</a>
                 </li>
-                <li class="active">数字型注入</li>
+                <li class="active">NumberTypeInjection</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="变量类型为数字">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="ChangeVolumeClassTypeForNumber">
+                PointOnceTip~
             </a>
 
         </div>
@@ -75,7 +75,7 @@ if(isset($_POST['submit']) && $_POST['id']!=null){
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
-                    <input class="sqli_submit" type="submit" name="submit" value="查询" />
+                    <input class="sqli_submit" type="submit" name="submit" value="Check" />
                 </form>
                 <?php echo $html;?>
             </div>

@@ -31,13 +31,13 @@ if(!$is_login_id){
 // $httpreferer=escape($link, $_SERVER['HTTP_REFERER']);
 
 
-//直接获取前端过来的头信息,没人任何处理,留下安全隐患
+//ObtainBeforeEndComeOfHeaderInformation,NoPerson,NextSafety
 $remoteipadd=$_SERVER['REMOTE_ADDR'];
 $useragent=$_SERVER['HTTP_USER_AGENT'];
 $httpaccept=$_SERVER['HTTP_ACCEPT'];
 $remoteport=$_SERVER['REMOTE_PORT'];
 
-//这里把http的头信息存到数据库里面去了，但是存进去之前没有进行转义，导致SQL注入漏洞
+//HerePuthttpOfHeaderInformationStoreToDatabaseInsideHas，ButIsStoreGoOnBeforeNoGoLineEscape，Lead toSQLInjection vulnerability
 $query="insert httpinfo(userid,ipaddress,useragent,httpaccept,remoteport) values('$is_login_id','$remoteipadd','$useragent','$httpaccept','$remoteport')";
 $result=execute($link, $query);
 
@@ -60,11 +60,11 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">http头注入</li>
+                <li class="active">httpHeaderInjection</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-                   data-content="这里的问题挺多的,跟http头里面有关的字段都可以测试一下">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+                   data-content="HereOfProblemOf,httpHeaderInsideAboutOfAllCanOnce">
+                PointOnceTip~
             </a>
 
 
@@ -74,11 +74,11 @@ if(isset($_GET['logout']) && $_GET['logout'] == 1){
             <?php
             $html=<<<A
 <div id="http_main">
-    <h1>朋友，你好，你的信息已经被记录了：<a href="sqli_header.php?logout=1">点击退出</a></h1>
-    <p>你的ip地址:$remoteipadd</p>
-    <p>你的user agent:$useragent</p>
-    <p>你的http accept:$httpaccept</p>
-    <p>你的端口（本次连接）:tcp$remoteport</p>
+    <h1>，You，YouOfInformationByHas：<a href="sqli_header.php?logout=1">Click</a></h1>
+    <p>YouOfipAddress:$remoteipadd</p>
+    <p>YouOfuser agent:$useragent</p>
+    <p>YouOfhttp accept:$httpaccept</p>
+    <p>YouOfEndPort（Connection）:tcp$remoteport</p>
 </div>
 A;
             echo $html;

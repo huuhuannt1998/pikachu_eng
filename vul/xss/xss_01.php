@@ -17,14 +17,14 @@ include_once $PIKA_ROOT_DIR.'header.php';
 
 $html = '';
 if(isset($_GET['submit']) && $_GET['message'] != null){
-    //这里会使用正则对<script进行替换为空,也就是过滤掉
+    //HereWillUseThenTo<scriptGoLineForEmpty,AlsoJustIsFilter
     $message=preg_replace('/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/', '', $_GET['message']);
 //    $message=str_ireplace('<script>',$_GET['message']);
 
     if($message == 'yes'){
-        $html.="<p>那就去人民广场一个人坐一会儿吧!</p>";
+        $html.="<p>ThatJustPersonOnePersonOneWillBar!</p>";
     }else{
-        $html.="<p>别说这些'{$message}'的话,不要怕,就是干!</p>";
+        $html.="<p>Say'{$message}'Of,NotTo,JustIs!</p>";
     }
 
 }
@@ -40,19 +40,19 @@ if(isset($_GET['submit']) && $_GET['message'] != null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">xss之过滤</li>
+                <li class="active">xssFiltering</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="有些内容被过滤了,试试看怎么绕过?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="HaveByFilterHas,LookBypass?">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
 
             <div id="xssr_main">
-                <p class="xssr_title">阁下,请问你觉得人生苦短吗?</p>
+                <p class="xssr_title">Next,PleaseAskYouPersonRight??</p>
                 <form method="get">
                     <input class="xssr_in" type="text" name="message" />
                     <input class="xssr_submit" type="submit" name="submit" value="submit" />

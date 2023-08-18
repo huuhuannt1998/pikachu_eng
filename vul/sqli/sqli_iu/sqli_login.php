@@ -21,14 +21,14 @@ include_once $PIKA_ROOT_DIR . "inc/mysql.inc.php";
 
 $link=connect();
 
-//判断是是否登录，如果已经登录，点击时，直接进入会员中心
+//JudgeIsIsIs logged in?，Such asResult，ClickWhen，EnterMemberIn
 if(check_sqli_session($link)){
     header("location:sqli_mem.php");
 }
 $html='';
 if(isset($_GET['submit'])){
     if($_GET['username']!=null && $_GET['password']!=null){
-        //转义，防注入
+        //Escape，Injection
         $username=escape($link, $_GET['username']);
         $password=escape($link, $_GET['password']);
         $query="select * from member where username='$username' and pw=md5('$password')";
@@ -39,7 +39,7 @@ if(isset($_GET['submit'])){
             $_SESSION['sqli']['password']=sha1(md5($password));
             header("location:sqli_mem.php");
         }else{
-            $html.="<p>登录失败,请重新登录</p>";
+            $html.="<p>Failure,PleaseAgainNew</p>";
         }
 
     }
@@ -62,9 +62,9 @@ if(isset($_GET['submit'])){
                 </li>
                 <li class="active">login</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="请先自己注册一个账号">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="PleaseFirstOneAccount">
+                PointOnceTip~
             </a>
 
 
@@ -105,7 +105,7 @@ if(isset($_GET['submit'])){
 
                     </form>
                     <?php echo $html;?>
-                    <p>如果你还没有账号,请点击<a href="sqli_reg.php">注册</a></p>
+                    <p>Such asResultYouAlsoNoAccount,PleaseClick<a href="sqli_reg.php"></a></p>
 
 
                 </div><!-- /.widget-main -->

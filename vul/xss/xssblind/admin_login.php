@@ -27,7 +27,7 @@ $html = "<p>please input username and password!</p>";
 if(isset($_POST['submit'])){
     if($_POST['username']!=null && $_POST['password']!=null){
 
-        //这里没有使用预编译方式,而是使用的拼接SQL,所以需要手动转义防止SQL注入
+        //HereNoUseMethod,IsUseOfSQL,SoAsToEscapeSQLInjection
         $username=escape($link, $_POST['username']);
         $password=escape($link, $_POST['password']);
 
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
         if(mysqli_num_rows($result)==1){
             $data=mysqli_fetch_assoc($result);
 
-            //登录时，生成cookie,1个小时有效期，供其他页面判断
+            //When，Generatecookie,1SmallWhenHaveEffect，OtherPageJudge
             setcookie('ant[uname]',$_POST['username'],time()+3600);
             setcookie('ant[pw]',sha1(md5($_POST['password'])),time()+3600);
 
@@ -74,9 +74,9 @@ if(isset($_POST['submit'])){
                 <li class="active">xssblind admin login</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="后台登录账号admin/123456">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="BackgroundAccountadmin/123456">
+                PointOnceTip~
             </a>
 
         </div>

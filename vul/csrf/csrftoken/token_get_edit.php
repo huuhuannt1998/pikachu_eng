@@ -20,9 +20,9 @@ include_once $PIKA_ROOT_DIR."inc/config.inc.php";
 include_once $PIKA_ROOT_DIR."inc/function.php";
 include_once $PIKA_ROOT_DIR."inc/mysql.inc.php";
 $link=connect();
-// 判断是否登录，没有登录不能访问
+// JudgeIsIs logged in?，NoNotCanVisit
 if(!check_csrf_login($link)){
-//    echo "<script>alert('登录后才能进入会员中心哦')</script>";
+//    echo "<script>alert('CanEnterMemberInOh')</script>";
     header("location:token_get_login.php");
 }
 
@@ -31,20 +31,20 @@ $html1='';
 
 if(isset($_GET['submit'])){
     if($_GET['sex']!=null && $_GET['phonenum']!=null && $_GET['add']!=null && $_GET['email']!=null && $_GET['token']==$_SESSION['token']){
-        //转义
+        //Escape
         $getdata=escape($link, $_GET);
         $query="update member set sex='{$getdata['sex']}',phonenum='{$getdata['phonenum']}',address='{$getdata['add']}',email='{$getdata['email']}' where username='{$_SESSION['csrf']['username']}'";
         $result=execute($link, $query);
-        //没有修改，点击提交，也算修改成功
+        //NoModify，ClickSubmit，AlsoModifySuccessful
         if(mysqli_affected_rows($link)==1 || mysqli_affected_rows($link)==0){
             header("location:token_get.php");
         }else {
-            $html1.="<p>修改失败,请重新登录</p>";
+            $html1.="<p>ModifyFailure,PleaseAgainNew</p>";
 
         }
     }
 }
-//生成token
+//Generatetoken
 set_token();
 
 ?>
@@ -60,16 +60,16 @@ set_token();
                 </li>
                 <li class="active">CSRF Token</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="源码看一下,有个隐藏的token,干啥用的的?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="SourceCodeLookOnce,HaveOftoken,UseOfOf?">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
 
             <?php
-            //通过当前session-name到数据库查询，并显示其对应信息
+            //ThroughWhenBeforesession-nameToDatabaseCheck，AndDisplayItsCorrespondingInformation
             $username=$_SESSION['csrf']['username'];
             $query="select * from member where username='$username'";
             $result=execute($link, $query);
@@ -83,12 +83,12 @@ set_token();
             $html=<<<A
 <div id="per_info">
    <form method="get">
-   <h1 class="per_title">hello,{$name},欢迎来到个人会员中心 | <a style="color:bule;" href="token_get.php?logout=1">退出登录</a></h1>
-   <p class="per_name">姓名:{$name}</p>
-   <p class="per_sex">性别:<input type="text" name="sex" value="{$sex}"/></p>
-   <p class="per_phone">手机:<input class="phonenum" type="text" name="phonenum" value="{$phonenum}"/></p>    
-   <p class="per_add">住址:<input class="add" type="text" name="add" value="{$add}"/></p> 
-   <p class="per_email">邮箱:<input class="email" type="text" name="email" value="{$email}"/></p>
+   <h1 class="per_title">hello,{$name},WelcomeComeToPersonMemberIn | <a style="color:bule;" href="token_get.php?logout=1"></a></h1>
+   <p class="per_name">Name:{$name}</p>
+   <p class="per_sex">:<input type="text" name="sex" value="{$sex}"/></p>
+   <p class="per_phone">Mobile phone:<input class="phonenum" type="text" name="phonenum" value="{$phonenum}"/></p>    
+   <p class="per_add">:<input class="add" type="text" name="add" value="{$add}"/></p> 
+   <p class="per_email">:<input class="email" type="text" name="email" value="{$email}"/></p>
    <input type="hidden" name="token" value="{$_SESSION['token']}" />
    <input class="sub" type="submit" name="submit" value="submit"/>
    </form>

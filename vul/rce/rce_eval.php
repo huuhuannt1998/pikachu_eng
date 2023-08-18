@@ -17,7 +17,7 @@ include_once $PIKA_ROOT_DIR . 'header.php';
 $html='';
 if(isset($_POST['submit']) && $_POST['txt'] != null){
     if(@!eval($_POST['txt'])){
-        $html.="<p>你喜欢的字符还挺奇怪的!</p>";
+        $html.="<p>YouOfCharacterAlsoOf!</p>";
 
     }
 
@@ -37,9 +37,9 @@ if(isset($_POST['submit']) && $_POST['txt'] != null){
                 </li>
                 <li class="active">exec "eval"</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="后台不会使用了eval()吧....">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="BackgroundNotWillUseHaseval()Bar....">
+                PointOnceTip~
             </a>
 
 
@@ -47,10 +47,10 @@ if(isset($_POST['submit']) && $_POST['txt'] != null){
         <div class="page-content">
 
             <div id="comm_main">
-                <p class="comm_title">Here, 请提交一个你喜欢的字符串:</p>
+                <p class="comm_title">Here, PleaseSubmitOneYouOfCharacterString:</p>
                 <form method="post">
                     <input class="ipadd" type="text" name="txt" />
-                    <input class="sub" type="submit" name="submit" value="提交" />
+                    <input class="sub" type="submit" name="submit" value="Submit" />
                 </form>
             </div>
             <?php echo $html;?>

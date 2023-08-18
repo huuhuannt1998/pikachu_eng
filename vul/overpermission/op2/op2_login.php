@@ -24,18 +24,18 @@ $html="";
 if(isset($_POST['submit'])){
     if($_POST['username']!=null && $_POST['password']!=null){
         $username=escape($link, $_POST['username']);
-        $password=escape($link, $_POST['password']);//转义，防注入
+        $password=escape($link, $_POST['password']);//Escape，Injection
         $query="select * from users where username='$username' and password=md5('$password')";
         $result=execute($link, $query);
         if(mysqli_num_rows($result)==1){
             $data=mysqli_fetch_assoc($result);
-            if($data['level']==1){//如果级别是1，进入admin.php
+            if($data['level']==1){//Such asResultIs1，Enteradmin.php
                 $_SESSION['op2']['username']=$username;
                 $_SESSION['op2']['password']=sha1(md5($password));
                 $_SESSION['op2']['level']=1;
                 header("location:op2_admin.php");
             }
-            if($data['level']==2){//如果级别是2，进入user.php
+            if($data['level']==2){//Such asResultIs2，Enteruser.php
                 $_SESSION['op2']['username']=$username;
                 $_SESSION['op2']['password']=sha1(md5($password));
                 $_SESSION['op2']['level']=2;
@@ -43,8 +43,8 @@ if(isset($_POST['submit'])){
             }
 
         }else{
-            //查询不到，登录失败
-            $html.="<p>登录失败,请重新登录</p>";
+            //CheckNotTo，Failure
+            $html.="<p>Failure,PleaseAgainNew</p>";
 
         }
 
@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
 }
 
 
-//只要退到这个界面就先清除登录状态，需要重新登录
+//OnlyToToThisSurfaceJustFirstClearExcept，ToAgainNew
 //session_unset();
 //session_destroy();
 //setcookie(session_name(),'',time()-3600,'/');
@@ -72,9 +72,9 @@ if(isset($_POST['submit'])){
                 </li>
                 <li class="active">op2 login</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="这里有两个用户admin/123456,pikachu/000000,admin是超级boss">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="HereHaveUseUseradmin/123456,pikachu/000000,adminIsboss">
+                PointOnceTip~
             </a>
 
         </div>

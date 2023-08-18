@@ -20,8 +20,8 @@ include_once $PIKA_ROOT_DIR . 'header.php';
 $html='';
 if(isset($_GET['submit']) && $_GET['filename']!=null){
     $filename=$_GET['filename'];
-    include "include/$filename";//变量传进来直接包含,没做任何的安全限制
-//     //安全的写法,使用白名单，严格指定包含的文件名
+    include "include/$filename";//ChangeVolumeTransferGoCome,NoDoOfSafetyLimit
+//     //SafetyOfWrite,UseNameSingle，StrictOfFileName
 //     if($filename=='file1.php' || $filename=='file2.php' || $filename=='file3.php' || $filename=='file4.php' || $filename=='file5.php'){
 //         include "include/$filename";
 
@@ -40,11 +40,11 @@ if(isset($_GET['submit']) && $_GET['filename']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="fileinclude.php">file include</a>
                 </li>
-                <li class="active">本地文件包含</li>
+                <li class="active">File</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先了解一下include()函数的用法吧">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstHasSolutionOnceinclude()FunctionOfUseBar">
+                PointOnceTip~
             </a>
         </div>
         <div class="page-content">

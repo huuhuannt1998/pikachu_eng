@@ -18,7 +18,7 @@ include_once $PIKA_ROOT_DIR . 'header.php';
 $html='';
 if(isset($_GET['title'])){
     $filename=$_GET['title'];
-    //这里直接把传进来的内容进行了require(),造成问题
+    //HerePutTransferGoComeOfGoLineHasrequire(),Problem
     require "soup/$filename";
 //    echo $html;
 }
@@ -31,14 +31,14 @@ if(isset($_GET['title'])){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="dir.php">目录遍历</a>
+                    <a href="dir.php">Directory traversal</a>
                 </li>
                 <li class="active">../../</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先好好读一下这两篇小短文在继续学习吧..">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstReadOnceSmallTextInBar..">
+                PointOnceTip~
             </a>
 
         </div>

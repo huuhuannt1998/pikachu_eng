@@ -1,15 +1,15 @@
 <?php
-//全局session_start
+//Globalsession_start
 session_start(); 
-//全局居设置时区
+//GlobalResidential setting time zone
 date_default_timezone_set('Asia/Shanghai');
-//全局设置默认字符
+//GlobalSettingDefaultCharacter
 header('Content-type:text/html;charset=utf-8');
-//定义数据库连接参数
-define('DBHOST', 'localhost');//将localhost修改为数据库服务器的地址
-define('DBUSER', 'root');//将root修改为连接mysql的用户名
-define('DBPW', 'root');//将root修改为连接mysql的密码
-define('DBNAME', 'pkxss');//自定义，建议不修改
-define('DBPORT', '3306');//将3306修改为mysql的连接端口，默认tcp3306
+//DefinitionDatabaseConnectionParameter
+define('DBHOST', 'localhost');//WilllocalhostModified to database serverOfAddress
+define('DBUSER', 'root');//WillrootModified to connectmysqlOfUsername
+define('DBPW', 'root');//WillrootModified to connectmysqlOfPassword
+define('DBNAME', 'pkxss');//Customize，RecommendNotModify
+define('DBPORT', '3306');//Will3306ModifyFormysqlOfConnection port，Defaulttcp3306
 
 ?>

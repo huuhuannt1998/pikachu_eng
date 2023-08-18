@@ -23,9 +23,9 @@ $link=connect();
 
 $html='';
 if(isset($_GET['submit']) && $_GET['name']!=null){
-    $name=$_GET['name'];//这里没有做任何处理，直接拼到select里面去了
-    $query="select id,email from member where username='$name'";//这里的变量是字符型，需要考虑闭合
-    //mysqi_query不打印错误描述,即使存在注入,也不好判断
+    $name=$_GET['name'];//HereNoDo，ToselectInsideHas
+    $query="select id,email from member where username='$name'";//HereOfChangeVolumeIsCharacterType，To
+    //mysqi_queryNotError,StoreInInjection,AlsoNotJudge
     $result=mysqli_query($link, $query);//
 //     $result=execute($link, $query);
     if($result && mysqli_num_rows($result)==1){
@@ -36,7 +36,7 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
         }
     }else{
 
-        $html.="<p class='notice'>您输入的username不存在，请重新输入！</p>";
+        $html.="<p class='notice'>YouInputOfusernameNotStoreIn，PleaseAgainNewInput！</p>";
     }
 }
 
@@ -53,11 +53,11 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">基于boolian的盲注</li>
+                <li class="active">boolianOfBlind injection</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="admin/123456">
-                点一下提示~
+                PointOnceTip~
             </a>
 
 
@@ -67,7 +67,7 @@ if(isset($_GET['submit']) && $_GET['name']!=null){
                 <p class="sqli_title">what's your username?</p>
                 <form method="get">
                     <input class="sqli_in" type="text" name="name" />
-                    <input class="sqli_submit" type="submit" name="submit" value="查询" />
+                    <input class="sqli_submit" type="submit" name="submit" value="Check" />
                 </form>
                 <?php echo $html;?>
             </div>

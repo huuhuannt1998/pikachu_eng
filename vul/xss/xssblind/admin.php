@@ -27,7 +27,7 @@ if(!$is_login_id){
 }
 
 
-$state = '你已经成功登录留言板后台,<a href="admin.php?logout=1">退出登陆</a>';
+$state = 'YouSuccessfulMessage boardBackground,<a href="admin.php?logout=1"></a>';
 
 if(isset($_GET['id']) && is_numeric($_GET['id'])){
     $id=escape($link, $_GET['id']);
@@ -57,26 +57,26 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../xss.php">xss</a>
                 </li>
-                <li class="active">xss盲打</li>
+                <li class="active">xss</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="被弹了吗?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="ByHasRight??">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
             <div id="list_blid_con">
                 <?php echo $state;?>
-                <h2>用户反馈的意见列表：</h2>
+                <h2>UseUserOfTable：</h2>
                 <table class="table table-bordered table-striped">
                     <tr>
-                        <td>编号</td>
-                        <td>时间</td>
-                        <td>内容</td>
-                        <td>姓名</td>
-                        <td>操作</td>
+                        <td></td>
+                        <td>When</td>
+                        <td></td>
+                        <td>Name</td>
+                        <td></td>
                     </tr>
                     <?php
                     $query="select * from xssblind";
@@ -88,7 +88,7 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
         <td>{$data['time']}</td>
         <td>{$data['content']}</td>
         <td>{$data['name']}</td>
-        <td><a href="admin.php?id={$data['id']}">删除</a></td>
+        <td><a href="admin.php?id={$data['id']}">Except</a></td>
     </tr>
 A;
                         echo $html;

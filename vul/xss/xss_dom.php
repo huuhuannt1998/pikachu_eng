@@ -19,7 +19,7 @@ include_once $PIKA_ROOT_DIR."inc/mysql.inc.php";
 
 
 if(isset($_GET['text'])){
-    $haha = "这里是后台的处理逻辑";
+    $haha = "HereIsBackgroundOf";
 }
 
 ?>
@@ -32,12 +32,12 @@ if(isset($_GET['text'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="xss.php">xss</a>
                 </li>
-                <li class="active">DOM型xss</li>
+                <li class="active">DOMTypexss</li>
             </ul><!-- /.breadcrumb -->
 
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="先到这里把什么是dom搞明白了在说http://www.w3school.com.cn/htmldom/">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="FirstToHerePutIsdomEngageHasInSayhttp://www.w3school.com.cn/htmldom/">
+                PointOnceTip~
             </a>
 
         </div>
@@ -49,8 +49,8 @@ if(isset($_GET['text'])){
                         var str = document.getElementById("text").value;
                         document.getElementById("dom").innerHTML = "<a href='"+str+"'>what do you see?</a>";
                     }
-                    //试试：'><img src="#" onmouseover="alert('xss')">
-                    //试试：' onclick="alert('xss')">,闭合掉就行
+                    //：'><img src="#" onmouseover="alert('xss')">
+                    //：' onclick="alert('xss')">,JustLine
                 </script>
                 <!--<a href="" onclick=('xss')>-->
                 <input id="text" name="text" type="text"  value="" />

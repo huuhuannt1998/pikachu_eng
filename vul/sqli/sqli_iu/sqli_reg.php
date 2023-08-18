@@ -24,20 +24,20 @@ $link=connect();
 $html='';
 if(isset($_POST['submit'])){
     if($_POST['username']!=null &&$_POST['password']!=null){
-//      $getdata=escape($link, $_POST);//转义
+//      $getdata=escape($link, $_POST);//Escape
 
-        //没转义,导致注入漏洞,操作类型为insert
+        //NoEscape,Lead toInjectionVulnerability,ClassTypeForinsert
         $getdata=$_POST;
         $query="insert into member(username,pw,sex,phonenum,email,address) values('{$getdata['username']}',md5('{$getdata['password']}'),'{$getdata['sex']}','{$getdata['phonenum']}','{$getdata['email']}','{$getdata['add']}')";
         $result=execute($link, $query);
         if(mysqli_affected_rows($link)==1){
-            $html.="<p>注册成功,请返回<a href='sqli_login.php'>登录</a></p>";
+            $html.="<p>Successful,PleaseReturn<a href='sqli_login.php'></a></p>";
         }else {
-            $html.="<p>注册失败,请检查下数据库是否还活着</p>";
+            $html.="<p>Failure,Please checkNextDatabaseIsNoAlso</p>";
 
         }
     }else{
-        $html.="<p>必填项不能为空哦</p>";
+        $html.="<p>NotCanForEmptyOh</p>";
     }
 }
 
@@ -55,11 +55,11 @@ if(isset($_POST['submit'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="../sqli.php">sqli</a>
                 </li>
-                <li class="active">注册</li>
+                <li class="active"></li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
                data-content="">
-                点一下提示~
+                PointOnceTip~
             </a>
 
 
@@ -68,13 +68,13 @@ if(isset($_POST['submit'])){
 
             <div id="reg_info">
                 <form method="post">
-                    <h1 class="reg_title">欢迎注册，请填写注册信息!</h1>
-                    <p class="reg_name">用户:<input class="r_username" type="text" name="username" placeholder="必填" /></p>
-                    <p class="reg_name">密码:<input class="r_username" type="text" name="password" placeholder="必填" /></p>
-                    <p class="reg_sex">性别:<input class="r_sex" type="text" name="sex"  /></p>
-                    <p class="reg_phone">手机:<input class="r_phonenum" type="text" name="phonenum"  /></p>
-                    <p class="reg_email">地址:<input class="r_email" type="text" name="email"  /></p>
-                    <p class="reg_add">住址:<input class="r_add" type="text" name="add"  /></p>
+                    <h1 class="reg_title">Welcome，PleaseWriteInformation!</h1>
+                    <p class="reg_name">UseUser:<input class="r_username" type="text" name="username" placeholder="" /></p>
+                    <p class="reg_name">Password:<input class="r_username" type="text" name="password" placeholder="" /></p>
+                    <p class="reg_sex">:<input class="r_sex" type="text" name="sex"  /></p>
+                    <p class="reg_phone">Mobile phone:<input class="r_phonenum" type="text" name="phonenum"  /></p>
+                    <p class="reg_email">Address:<input class="r_email" type="text" name="email"  /></p>
+                    <p class="reg_add">:<input class="r_add" type="text" name="add"  /></p>
                     <input class="sub" type="submit" name="submit" value="submit"/>
                 </form>
             </div>

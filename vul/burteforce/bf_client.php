@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
             }
 
         } else {
-            $html .= '<p>执行错误:' . $line_pre->errno . '错误信息:' . $line_pre->error . '</p>';
+            $html .= '<p>HoldLineError:' . $line_pre->errno . 'ErrorInformation:' . $line_pre->error . '</p>';
         }
 
 
@@ -60,14 +60,14 @@ if(isset($_POST['submit'])){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">Brute force cracking</a>
                 </li>
-                <li class="active">验证码绕过(on client)</li>
+                <li class="active">Captcha bypass(on client)</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="仔细看下,这个验证码到底是个什么鬼?..看看前端JS源码,发现什么了吗?">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="CarefullyLookNext,ThisVerificationCodeIn the endIsWhat the heck?..LookLookBeforeEndJSSourceCode,Find somethingHasRight??">
+                PointOnceTip~
             </a>
 
         </div>
@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
 
                 <label>
                         <span>
-                            <input class="vcode" name="vcode" placeholder="验证码" type="text" />
+                            <input class="vcode" name="vcode" placeholder="VerificationCode" type="text" />
                             <i class="ace-icon fa fa-lock"></i>
                         </span>
                 </label>
@@ -130,12 +130,12 @@ if(isset($_POST['submit'])){
 
 
 <script language="javascript" type="text/javascript">
-    var code; //在全局 定义验证码
+    var code; //InGlobal DefinitionVerificationCode
     function createCode() {
         code = "";
-        var codeLength = 5;//验证码的长度
+        var codeLength = 5;//VerificationCodeOfLength
         var checkCode = document.getElementById("checkCode");
-        var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//所有候选组成验证码的字符，当然也可以用中文的
+        var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//SoHaveCandidate compositionVerificationCodeOfCharacter，WhenHoweverAlsoCanUseInTextOf
 
         for (var i = 0; i < codeLength; i++) {
             var charIndex = Math.floor(Math.random() * 36);
@@ -151,11 +151,11 @@ if(isset($_POST['submit'])){
     function validate() {
         var inputCode = document.querySelector('#bf_client .vcode').value;
         if (inputCode.length <= 0) {
-            alert("请输入验证码！");
+            alert("PleaseInputVerificationCode！");
             return false;
         } else if (inputCode != code) {
-            alert("验证码输入错误！");
-            createCode();//刷新验证码
+            alert("VerificationCodeInputError！");
+            createCode();//BrushNewVerificationCode
             return false;
         }
         else {

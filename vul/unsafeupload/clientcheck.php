@@ -17,10 +17,10 @@ include_once $PIKA_ROOT_DIR.'inc/uploadfunction.php';
 $html='';
 if(isset($_POST['submit'])){
 //     var_dump($_FILES);
-    $save_path='uploads';//指定在当前目录建立一个目录
-    $upload=upload_client('uploadfile',$save_path);//调用函数
+    $save_path='uploads';//InWhenBeforeDirectoryOneDirectory
+    $upload=upload_client('uploadfile',$save_path);//UseFunction
     if($upload['return']){
-        $html.="<p class='notice'>文件上传成功</p><p class='notice'>文件保存的路径为：{$upload['new_path']}</p>";
+        $html.="<p class='notice'>FileOnTransferSuccessful</p><p class='notice'>FileKeepStoreOfPathFor：{$upload['new_path']}</p>";
     }else{
         $html.="<p class=notice>{$upload['error']}</p>";
     }
@@ -41,23 +41,23 @@ if(isset($_POST['submit'])){
                     <i class="ace-icon fa fa-home home-icon"></i>
                     <a href="upload.php">unsafe upfileupload</a>
                 </li>
-                <li class="active">客户端check</li>
+                <li class="active">UserEndcheck</li>
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="一切在前端做的安全措施都是不靠谱的">
-                点一下提示~
+            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(Click againOnceClose)"
+               data-content="OneInBeforeEndDoOfSafetyAllIsNotOf">
+                PointOnceTip~
             </a>
 
         </div>
         <div class="page-content">
             <div id="usu_main">
-                <p class="title">这里只允许上传图片o！</p>
+                <p class="title">HereOnlyOnTransferPictureo！</p>
                 <form class="upload" method="post" enctype="multipart/form-data"  action="">
                     <input class="uploadfile" type="file"  name="uploadfile" onchange="checkFileExt(this.value)"/><br />
-                    <input class="sub" type="submit" name="submit" value="开始上传" />
+                    <input class="sub" type="submit" name="submit" value="OnTransfer" />
                 </form>
                 <?php
-                echo $html;//输出了路径，暴露了
+                echo $html;//OutputHasPath，Has
                 ?>
             </div>
 
@@ -71,24 +71,24 @@ if(isset($_POST['submit'])){
 <script>
     function checkFileExt(filename)
     {
-        var flag = false; //状态
+        var flag = false; //
         var arr = ["jpg","png","gif"];
-        //取出上传文件的扩展名
+        //OnTransferFileOfExtendName
         var index = filename.lastIndexOf(".");
         var ext = filename.substr(index+1);
-        //比较
+        //ComparedCompared
         for(var i=0;i<arr.length;i++)
         {
             if(ext == arr[i])
             {
-                flag = true; //一旦找到合适的，立即退出循环
+                flag = true; //OneFindToOf，
                 break;
             }
         }
-        //条件判断
+        //Judge
         if(!flag)
         {
-            alert("上传的文件不符合要求，请重新选择！");
+            alert("OnTransferOfFileNotToPlease，PleaseAgainNewChoose！");
             location.reload(true);
         }
     }
